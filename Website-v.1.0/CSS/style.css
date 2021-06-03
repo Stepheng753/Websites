@@ -7,8 +7,12 @@ h1 {
 	font-size: 45px;
 }
 
-#headerA {
+#headerA,
+#headerA:hover,
+#headerA:active,
+#headerA:visited {
 	text-decoration: none;
+	color: #c80815;
 }
 
 a:hover {
