@@ -8,11 +8,39 @@
 		<base href="Home.html" />
 		<link rel="stylesheet" href="CSS/StyleSheet.css" />
 		<link rel="icon" href="../Website-v.1.0/External/Icon.svg" />
+		<script src="JavaScript/functions.js"></script>
 		<title>Stephen Giang</title>
 	</head>
 	<body>
-		<section id="MainView">
+		<div id="title">
+			<img src="External/Icon.svg" id="logo" />
 			<h1>Stephen Giang</h1>
-		</section>
+		</div>
+
+		<div id="hoverRadius">
+			<div class="nav">
+				<div id="coverBlock"></div>
+				<div onclick="location.href='Home.html';" class="block" id="topBlock">
+					<h3>Home</h3>
+				</div>
+				<div onclick="location.href='Home.html';" class="block" id="midBlock">
+					<h3>Projects</h3>
+				</div>
+				<div onclick="location.href='Home.html';" class="block" id="midBlock">
+					<h3>Documents</h3>
+				</div>
+				<div onclick="location.href='Home.html';" class="block" id="midBlock">
+					<h3>Biography</h3>
+				</div>
+				<div onclick="location.href='Home.html';" class="block" id="midBlock">
+					<h3>Tutoring</h3>
+				</div>
+				<div onclick="location.href='Home.html';" class="block" id="endBlock">
+					<h3>Contact</h3>
+				</div>
+			</div>
+		</div>
+
+		<div id="mouseFollower"></div>
 	</body>
 </html>
