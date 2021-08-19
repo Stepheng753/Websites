@@ -1,5 +1,5 @@
 document.write(
-	'<div class="centerDiv"> <div id="title"> <img src="External/Icon.svg" id="logo" onclick="location.href=\'Home.html\';" /> <h1 onclick="location.href=\'Home.html\';">Stephen Giang</h1> <fieldset id="themes"> <legend>Themes</legend> <div id="top-themes"> <input type="radio" value="1" id="theme-1" name="theme" onclick="changeTheme(1);" checked /><label for="theme-1">Theme 1</label> <input type="radio" value="2" id="theme-2" name="theme" style="margin-left: 15px" onclick="changeTheme(2);" /><label for="theme-2">Theme 2</label> </div> <br /> <div id="bottom-themes"> <input type="radio" value="3" id="theme-3" name="theme" onclick="changeTheme(3);" /><label for="theme-3" >Theme 3</label > <input type="radio" value="4" id="theme-4" name="theme" style="margin-left: 15px" onclick="changeTheme(4);" /><label for="theme-4">Theme 4</label> </div> </fieldset> </div> </div> <div id="hoverRadius"> <div class="nav"> <div id="coverBlock"></div> <div onclick="location.href=\'Home.html\';" class="block" id="topBlock"><h3>Home</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="midBlock"><h3>Projects</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="midBlock"><h3>Documents</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="midBlock"><h3>Biography</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="midBlock"><h3>Tutoring</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="endBlock"><h3>Contact</h3></div> </div> </div> <div id="mouseFollower"></div>'
+	'<div class="centerDiv"> <div id="title"> <img src="External/Icon.svg" id="logo" onclick="location.href=\'Home.html\';" /> <h1 onclick="location.href=\'Home.html\';">Stephen Giang</h1> <fieldset id="themes"> <legend>Themes</legend> <input type="radio" value="1" id="theme-1" name="theme" onclick="changeTheme(1);" checked /><label for="theme-1" >Theme 1</label > <input type="radio" value="2" id="theme-2" name="theme" onclick="changeTheme(2);" /><label for="theme-2" >Theme 2</label > <input type="radio" value="3" id="theme-3" name="theme" onclick="changeTheme(3);" /><label for="theme-3" >Theme 3</label > <input type="radio" value="4" id="theme-4" name="theme" onclick="changeTheme(4);" /><label for="theme-4" >Theme 4</label > </fieldset> </div> </div> <div id="hoverRadius"> <div class="nav"> <div id="coverBlock"></div> <div onclick="location.href=\'Home.html\';" class="block" id="topBlock"><h3>Home</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="midBlock"><h3>Projects</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="midBlock"><h3>Documents</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="midBlock"><h3>Biography</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="midBlock"><h3>Tutoring</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="endBlock"><h3>Contact</h3></div> </div> </div> <div id="mouseFollower"></div>'
 );
 
 window.onload = function () {
@@ -68,6 +68,7 @@ function changeTheme(index) {
 		cssColors.style.setProperty('--border-color', '#075a79');
 		cssColors.style.setProperty('--block-color', '#568ea3');
 		cssColors.style.setProperty('--title-color', '#b31b1b');
+		cssColors.style.setProperty('--text-color', '#000');
 		cssColors.style.setProperty('--color-grad-1', '#568ea3');
 		cssColors.style.setProperty('--color-grad-2', '#90d4e0');
 		cssColors.style.setProperty('--color-grad-3', '#ffe8d1');
@@ -76,6 +77,7 @@ function changeTheme(index) {
 		cssColors.style.setProperty('--border-color', '#3c1d49');
 		cssColors.style.setProperty('--block-color', '#ffa69e');
 		cssColors.style.setProperty('--title-color', '#aa4465');
+		cssColors.style.setProperty('--text-color', '#000');
 		cssColors.style.setProperty('--color-grad-1', '#3fcaba');
 		cssColors.style.setProperty('--color-grad-2', '#ddfff7');
 		cssColors.style.setProperty('--color-grad-3', '#ffa69e');
@@ -84,14 +86,16 @@ function changeTheme(index) {
 		cssColors.style.setProperty('--border-color', '#f9a39b');
 		cssColors.style.setProperty('--block-color', '#efbdca');
 		cssColors.style.setProperty('--title-color', '#f67451');
+		cssColors.style.setProperty('--text-color', '#000');
 		cssColors.style.setProperty('--color-grad-1', '#87e8d1');
 		cssColors.style.setProperty('--color-grad-2', '#9999ff');
 		cssColors.style.setProperty('--color-grad-3', '#cffcff');
 	}
 	if (index == 4) {
-		cssColors.style.setProperty('--border-color', '#000');
+		cssColors.style.setProperty('--border-color', '#5F6D81');
 		cssColors.style.setProperty('--block-color', '#a3001b');
 		cssColors.style.setProperty('--title-color', '#a3001b');
+		cssColors.style.setProperty('--text-color', '#fff');
 		cssColors.style.setProperty('--color-grad-1', '#000');
 		cssColors.style.setProperty('--color-grad-2', '#fff');
 		cssColors.style.setProperty('--color-grad-3', '#a3001b');
