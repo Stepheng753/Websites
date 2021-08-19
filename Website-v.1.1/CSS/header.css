@@ -1,0 +1,139 @@
+:root {
+	--border-color: #075a79;
+	--title-color: #b31b1b;
+	--block-color: #568ea3;
+}
+
+/* Title Logo Header */
+/* -------------------------------------------------------- */
+.centerDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 3vh;
+	height: 26vh;
+	width: 26vw;
+	z-index: 2;
+}
+
+#title #logo {
+	height: 20vh;
+	width: 10vw;
+	cursor: pointer;
+}
+
+#title h1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 16vh;
+	height: 6vh;
+	color: var(--title-color);
+	font-size: 50pt;
+	text-shadow: -1px 1px black;
+	cursor: pointer;
+}
+
+#themes {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 3vh;
+	right: 3vw;
+	border: 2pt solid var(--border-color);
+	width: 10vw;
+	height: 10vh;
+}
+
+#top-themes {
+	position: absolute;
+	bottom: 6vh;
+	left: 0vw;
+	width: 12vw;
+}
+
+#bottom-themes {
+	position: absolute;
+	bottom: 1vh;
+	left: 0vw;
+	width: 12vw;
+}
+/* -------------------------------------------------------- */
+
+/* Navigation Bar */
+/* -------------------------------------------------------- */
+#hoverRadius {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 25vh;
+	left: -27vw;
+	height: 60vh;
+	width: 45vw;
+	transition: left 1s;
+	z-index: 2;
+	/* border: 2pt dashed black; */
+	border-radius: 1000px;
+}
+
+#hoverRadius:hover {
+	position: absolute;
+	left: -16vw;
+	border: hidden;
+}
+
+.nav {
+	position: relative;
+	border: 2pt solid var(--border-color);
+}
+
+#coverBlock {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--block-color);
+	transition: opacity ease 1.5s;
+	z-index: 1;
+}
+
+#hoverRadius:hover #coverBlock {
+	opacity: 0;
+	transition: opacity ease 1.5s;
+	z-index: 0;
+}
+
+#hoverRadius:hover .block:hover {
+	border: 2pt solid var(--border-color);
+	transform: scale(1.2);
+	z-index: 3;
+}
+
+.block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	height: 5vh;
+	width: 13vw;
+	background-color: var(--block-color);
+	border: 1pt solid var(--border-color);
+	border-right: 1.5pt solid var(--border-color);
+	cursor: pointer;
+}
+
+.block h3 {
+	color: white;
+	text-decoration: none;
+	text-shadow: -2px 2px var(--border-color);
+}
+
+/* -------------------------------------------------------- */
