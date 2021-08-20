@@ -3,7 +3,7 @@ window.onload = function () {
 };
 
 function makeClouds() {
-	const numClouds = 7;
+	const numClouds = Math.floor(Math.random() * 6) + 2;
 	let alpha1 = 1 / 3;
 	let alpha2 = 2 / 3;
 	let beginRange = 100 / (numClouds * (1 - alpha1) + alpha1);
