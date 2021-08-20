@@ -1,4 +1,5 @@
 window.onload = function () {
+	document.onkeydown = moveBike;
 	makeClouds();
 	setInterval(() => {
 		makeClouds();
@@ -34,4 +35,38 @@ function removeClouds() {
 	while (clouds.length > 0) {
 		clouds[0].parentElement.removeChild(clouds[0]);
 	}
+}
+
+function moveBike(event) {
+	const speed = 1;
+	let bike = document.getElementById('biker');
+	let leftVal = Math.round(
+		convertPXToVW(getComputedStyle(bike).left.substring(0, getComputedStyle(bike).left.indexOf('p')))
+	);
+	let bikeWidth = Math.round(
+		convertPXToVW(getComputedStyle(bike).width.substring(0, getComputedStyle(bike).width.indexOf('p')))
+	);
+	if ((event.key == 'ArrowLeft' || event.key.toLowerCase() == 'a') && leftVal - speed > 0) {
+		bike.style.setProperty('left', leftVal - speed + 'vw');
+		bike.style.setProperty('transform', 'scaleX(1)');
+	}
+	if ((event.key == 'ArrowRight' || event.key.toLowerCase() == 'd') && leftVal + bikeWidth + speed < 100) {
+		bike.style.setProperty('left', leftVal + speed + 'vw');
+		bike.style.setProperty('transform', 'scaleX(-1)');
+	}
+	if ((event.key == 'ArrowUp' || event.key.toLowerCase() == 'w') && leftVal <= 20 && leftVal >= 5) {
+		window.location = 'Home.html';
+	}
+	if ((event.key == 'ArrowUp' || event.key.toLowerCase() == 'w') && leftVal <= 75 && leftVal >= 72) {
+		window.location = 'Home.html';
+	}
+	console.log(leftVal);
+}
+
+function convertPXToVW(px) {
+	return px * (100 / document.documentElement.clientWidth);
+}
+
+function convertPXToVH(px) {
+	return px * (100 / document.documentElement.clientHeight);
 }

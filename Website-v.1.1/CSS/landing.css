@@ -33,11 +33,13 @@ body {
 #house {
 	width: 25vw;
 	left: 5vw;
+	cursor: pointer;
 }
 
 #school {
 	width: 30vw;
 	right: 5vw;
+	cursor: pointer;
 }
 
 #road {
