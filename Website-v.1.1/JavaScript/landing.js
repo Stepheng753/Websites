@@ -1,5 +1,8 @@
 window.onload = function () {
 	makeClouds();
+	setInterval(() => {
+		makeClouds();
+	}, 10000);
 };
 
 function makeClouds() {
@@ -23,5 +26,12 @@ function makeClouds() {
 		let size = 'width: ' + randomWidth + 'vw;';
 		cloud.style = position + size;
 		document.body.appendChild(cloud);
+	}
+}
+
+function removeClouds() {
+	let clouds = document.getElementsByClassName('cloud');
+	while (clouds.length > 0) {
+		clouds[0].parentElement.removeChild(clouds[0]);
 	}
 }

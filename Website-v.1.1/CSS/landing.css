@@ -10,6 +10,26 @@ body {
 	bottom: 15vh;
 }
 
+.cloud {
+	opacity: 0;
+	animation: fadeInOut 10s;
+}
+
+@keyframes fadeInOut {
+	0% {
+		opacity: 0;
+	}
+	33% {
+		opacity: 1;
+	}
+	66% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 #house {
 	width: 25vw;
 	left: 5vw;
