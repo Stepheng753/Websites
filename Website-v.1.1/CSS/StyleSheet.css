@@ -1,4 +1,5 @@
 @import 'header.css';
+@import 'redirects.css';
 
 :root {
 	--color-grad-1: #568ea3;

@@ -66,18 +66,18 @@ function moveBike(event) {
 	else school.style.setProperty('transform', 'scale(1)');
 
 	if (
-		(event.key == 'ArrowUp' || event.key.toLowerCase() == 'w') &&
+		(event.key == 'ArrowUp' || event.key.toLowerCase() == 'w' || event.key == 'Enter' || event.key == ' ') &&
 		leftVal <= houseRange[1] &&
 		leftVal >= houseRange[0]
 	) {
-		window.location = 'Home.html?val=home';
+		window.location = 'Home.html?ref=home';
 	}
 	if (
-		(event.key == 'ArrowUp' || event.key.toLowerCase() == 'w') &&
+		(event.key == 'ArrowUp' || event.key.toLowerCase() == 'w' || event.key == 'Enter' || event.key == ' ') &&
 		leftVal <= schoolRange[1] &&
 		leftVal >= schoolRange[0]
 	) {
-		window.location = 'Home.html?val=tutor';
+		window.location = 'Home.html?ref=tutoring';
 	}
 }
 

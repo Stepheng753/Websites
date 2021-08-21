@@ -1,11 +1,17 @@
-document.write(
-	'<div class="centerDiv"> <div id="title"> <img src="External/Icon.svg" id="logo" onclick="location.href=\'Home.html\';" /> <h1 onclick="location.href=\'Home.html\';">Stephen Giang</h1> <fieldset id="themes"> <legend>Themes</legend> <input type="radio" value="1" id="theme-1" name="theme" onclick="changeTheme(1);" checked /><label for="theme-1" >Theme 1</label > <input type="radio" value="2" id="theme-2" name="theme" onclick="changeTheme(2);" /><label for="theme-2" >Theme 2</label > <input type="radio" value="3" id="theme-3" name="theme" onclick="changeTheme(3);" /><label for="theme-3" >Theme 3</label > <input type="radio" value="4" id="theme-4" name="theme" onclick="changeTheme(4);" /><label for="theme-4" >Theme 4</label > </fieldset> </div> </div> <div id="hoverRadius"> <div class="nav"> <div id="coverBlock"></div> <div onclick="location.href=\'Home.html\';" class="block" id="topBlock"><h3>Home</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="midBlock"><h3>Projects</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="midBlock"><h3>Documents</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="midBlock"><h3>Biography</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="midBlock"><h3>Tutoring</h3></div> <div onclick="location.href=\'Home.html\';" class="block" id="midBlock"><h3>Contact</h3></div> <div onclick="location.href=\'Landing.html\';" class="block" id="endBlock"><h3>Landing Page</h3></div> </div> </div> <div id="mouseFollower"></div>'
-);
+var theme = 1;
 
 window.onload = function () {
-	console.log(window.location.search);
-	mouseLoc();
-	borderNav();
+	try {
+		let parameters = window.location.search.split('?')[1].split('&');
+		choosePage(parameters[0].substring(parameters[0].indexOf('=') + 1, parameters[0].length));
+		changeTheme(parameters[1].substring(parameters[1].indexOf('=') + 1, parameters[1].length));
+	} catch {
+		choosePage();
+		changeTheme(theme);
+	} finally {
+		mouseLoc();
+		borderNav();
+	}
 };
 
 function mouseLoc() {
@@ -38,33 +44,30 @@ function borderNav() {
 	let block = document.getElementsByClassName('block');
 	for (let i = 0; i < block.length; i++) {
 		block[i].onmouseover = function () {
-			nav.style = 'border: hidden';
-			block[i].style = 'border: 2pt solid var(--border-color);';
+			nav.style.setProperty('border', 'hidden');
+			block[i].style.setProperty('border', '2pt solid var(--border-color);');
 			for (let j = 0; j < block.length; j++) {
 				if (j != i && block[j].id == 'topBlock') {
-					block[j].style =
-						'border-top: 2pt solid var(--border-color); border-right: 2pt solid var(--border-color);';
+					block[j].style.setProperty('border-top', '2pt solid var(--border-color);');
+					block[j].style.setProperty('border-right', '2pt solid var(--border-color);');
 				} else if (j != i && block[j].id == 'midBlock') {
-					block[j].style = 'border-right: 2pt solid var(--border-color);';
+					block[j].style.setProperty('border-right', '2pt solid var(--border-color);');
 				} else if (j != i && block[j].id == 'endBlock') {
-					block[j].style =
-						'border-bottom: 2pt solid var(--border-color); border-right: 2pt solid var(--border-color);';
+					block[j].style.setProperty('border-bottom', '2pt solid var(--border-color);');
+					block[j].style.setProperty('border-right', '2pt solid var(--border-color);');
 				}
 			}
 		};
 		block[i].onmouseout = function () {
-			for (let j = 0; j < block.length; j++) {
-				block[j].style =
-					'border: 1pt solid var(--border-color); border-right: 1.5pt solid var(--border-color);';
-			}
-			nav.style = 'border: 2pt solid var(--border-color);';
+			nav.style.setProperty('border', '2pt solid var(--border-color);');
 		};
 	}
 }
 
 function changeTheme(index) {
-	let selectedRadio = document.getElementsByName('theme');
+	theme = index;
 	let cssColors = document.querySelector(':root');
+	document.getElementById('theme-' + index).setAttribute('checked', 'true');
 	if (index == 1) {
 		cssColors.style.setProperty('--border-color', '#075a79');
 		cssColors.style.setProperty('--block-color', '#568ea3');

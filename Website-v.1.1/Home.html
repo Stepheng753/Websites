@@ -8,9 +8,91 @@
 		<base href="Home.html" />
 		<link rel="icon" href="External/Icon.svg" />
 		<link rel="stylesheet" href="CSS/StyleSheet.css" />
+		<script src="JavaScript/header.js"></script>
+		<script src="JavaScript/redirects.js"></script>
 		<title>Stephen Giang</title>
 	</head>
 	<body>
-		<script src="JavaScript/header.js"></script>
+		<div id="header">
+			<div class="centerDiv">
+				<div id="title">
+					<img src="External/Icon.svg" id="logo" onclick="location.href='Home.html?ref=home&theme=' + theme;""
+					/>
+					<h1 onclick="location.href='Home.html?ref=home&theme=' + theme;">Stephen Giang</h1>
+					<fieldset id="themes">
+						<legend>Themes</legend>
+						<input type="radio" value="1" id="theme-1" name="theme" onclick="changeTheme(1);" /><label
+							for="theme-1"
+							>Theme 1</label
+						>
+						<input type="radio" value="2" id="theme-2" name="theme" onclick="changeTheme(2);" /><label
+							for="theme-2"
+							>Theme 2</label
+						>
+						<input type="radio" value="3" id="theme-3" name="theme" onclick="changeTheme(3);" /><label
+							for="theme-3"
+							>Theme 3</label
+						>
+						<input type="radio" value="4" id="theme-4" name="theme" onclick="changeTheme(4);" /><label
+							for="theme-4"
+							>Theme 4</label
+						>
+					</fieldset>
+				</div>
+			</div>
+			<div id="hoverRadius">
+				<div class="nav">
+					<div id="coverBlock"></div>
+					<div onclick="location.href='Home.html?ref=home&theme=' + theme;" class="block" id="topBlock">
+						<h3>Home</h3>
+					</div>
+					<div onclick="location.href='Home.html?ref=projects&theme=' + theme;" class="block" id="midBlock">
+						<h3>Projects</h3>
+					</div>
+					<div onclick="location.href='Home.html?ref=documents&theme=' + theme;" class="block" id="midBlock">
+						<h3>Documents</h3>
+					</div>
+					<div onclick="location.href='Home.html?ref=biography&theme=' + theme;" class="block" id="midBlock">
+						<h3>Biography</h3>
+					</div>
+					<div onclick="location.href='Home.html?ref=tutoring&theme=' + theme;" class="block" id="midBlock">
+						<h3>Tutoring</h3>
+					</div>
+					<div onclick="location.href='Home.html?ref=contact&theme=' + theme;" class="block" id="midBlock">
+						<h3>Contact</h3>
+					</div>
+					<div onclick="location.href='Landing.html';" class="block" id="endBlock"><h3>Landing Page</h3></div>
+				</div>
+			</div>
+			<div id="mouseFollower"></div>
+
+			<div id="redirects">
+				<div class="redirects" id="home">
+					<h1>Hello and Welcome!</h1>
+					<p style="color: white; text-shadow: -0.5px 0.5px black">
+						This is my second time making a full fledges website. This website is a host for my Personal
+						Projects along with simply anything I want to show the world. I have really found a great
+						passion in programming, especially the web development side of it, over the past 3 years. I love
+						web development because its a way for me to make visualizations of my entire programming
+						journey, instead of just printing statements. One thing, I very much struggle in is being
+						creative.
+						<a href="../Website-v.1.0/Home.html">My first website</a> was a raw website with hardly any
+						design or styling, and was purely functional. This time, through the help of my friends for
+						design purposes, I made this website entirely using Vanilla JS, HTML, and CSS. Please feel free
+						to navigate through my website and contact me if you have any suggestions or would like to see
+						anything regarding my website. I always have an open ear for ways to make my website more
+						interactive and fun.
+					</p>
+				</div>
+
+				<div class="redirects" id="projects">
+					<object
+						data="../../Personal-Projects/JavaScript/p5.js/Sorting Algorithms/BubbleSort/SlowBubbleSort.html"
+						width="1000px"
+						height="500px"
+					></object>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
