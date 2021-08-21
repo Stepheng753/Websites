@@ -70,14 +70,14 @@ function moveBike(event) {
 		leftVal <= houseRange[1] &&
 		leftVal >= houseRange[0]
 	) {
-		window.location = 'Home.html?ref=home';
+		window.location = 'Home.html?ref=home&theme=1';
 	}
 	if (
 		(event.key == 'ArrowUp' || event.key.toLowerCase() == 'w' || event.key == 'Enter' || event.key == ' ') &&
 		leftVal <= schoolRange[1] &&
 		leftVal >= schoolRange[0]
 	) {
-		window.location = 'Home.html?ref=tutoring';
+		window.location = 'Home.html?ref=tutoring&theme=1';
 	}
 }
 

@@ -1,5 +1,4 @@
 function choosePage(page = '') {
-	console.log(page);
 	let redirects = document.getElementsByClassName('redirects');
 	let index = 0;
 	while (redirects.length > 0 && index < redirects.length) {
