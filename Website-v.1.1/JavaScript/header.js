@@ -3,6 +3,7 @@ document.write(
 );
 
 window.onload = function () {
+	console.log(window.location.search);
 	mouseLoc();
 	borderNav();
 };

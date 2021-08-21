@@ -40,6 +40,11 @@ function removeClouds() {
 function moveBike(event) {
 	const speed = 1;
 	let bike = document.getElementById('biker');
+	let house = document.getElementById('house');
+	let school = document.getElementById('school');
+	let houseRange = [5, 20];
+	let schoolRange = [63, 85];
+
 	let leftVal = Math.round(
 		convertPXToVW(getComputedStyle(bike).left.substring(0, getComputedStyle(bike).left.indexOf('p')))
 	);
@@ -54,13 +59,26 @@ function moveBike(event) {
 		bike.style.setProperty('left', leftVal + speed + 'vw');
 		bike.style.setProperty('transform', 'scaleX(-1)');
 	}
-	if ((event.key == 'ArrowUp' || event.key.toLowerCase() == 'w') && leftVal <= 20 && leftVal >= 5) {
-		window.location = 'Home.html';
+	if (leftVal <= houseRange[1] && leftVal >= houseRange[0]) house.style.setProperty('transform', 'scale(1.2)');
+	else house.style.setProperty('transform', 'scale(1)');
+
+	if (leftVal <= schoolRange[1] && leftVal >= schoolRange[0]) school.style.setProperty('transform', 'scale(1.2)');
+	else school.style.setProperty('transform', 'scale(1)');
+
+	if (
+		(event.key == 'ArrowUp' || event.key.toLowerCase() == 'w') &&
+		leftVal <= houseRange[1] &&
+		leftVal >= houseRange[0]
+	) {
+		window.location = 'Home.html?val=home';
 	}
-	if ((event.key == 'ArrowUp' || event.key.toLowerCase() == 'w') && leftVal <= 75 && leftVal >= 72) {
-		window.location = 'Home.html';
+	if (
+		(event.key == 'ArrowUp' || event.key.toLowerCase() == 'w') &&
+		leftVal <= schoolRange[1] &&
+		leftVal >= schoolRange[0]
+	) {
+		window.location = 'Home.html?val=tutor';
 	}
-	console.log(leftVal);
 }
 
 function convertPXToVW(px) {
