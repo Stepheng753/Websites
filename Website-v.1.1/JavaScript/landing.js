@@ -21,7 +21,7 @@ function makeClouds() {
 		let randomLeft = Math.floor(Math.random() * (endRange - beginRange)) + beginRange;
 		let randomTop = Math.floor(Math.random() * 15) + 5;
 		let cloud = document.createElement('img');
-		cloud.src = 'External/Landing Page/Cloud.svg';
+		cloud.src = 'Landing Page/Cloud.svg';
 		cloud.className = 'cloud';
 		let position = 'position: absolute; left: ' + randomLeft + 'vw; top: ' + randomTop + 'vh;';
 		let size = 'width: ' + randomWidth + 'vw;';
