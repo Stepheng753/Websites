@@ -29,7 +29,7 @@ function makeClouds() {
 		cloud.style = position + size + cursor;
 		document.body.appendChild(cloud);
 		cloud.onclick = () => {
-			window.location = 'External/Landing Clouds Math/Clouds.pdf';
+			window.open('External/Landing Clouds Math/Clouds.pdf', '_blank');
 		};
 	}
 }
