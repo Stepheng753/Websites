@@ -49,8 +49,7 @@ a {
 	border: none;
 	top: 0vh;
 	padding: 0;
-
-	overflow: scroll;
+	overflow-y: scroll;
 }
 
 #projects {

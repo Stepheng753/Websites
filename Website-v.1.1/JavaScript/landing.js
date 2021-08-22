@@ -25,8 +25,12 @@ function makeClouds() {
 		cloud.className = 'cloud';
 		let position = 'position: absolute; left: ' + randomLeft + 'vw; top: ' + randomTop + 'vh;';
 		let size = 'width: ' + randomWidth + 'vw;';
-		cloud.style = position + size;
+		let cursor = 'cursor: pointer;';
+		cloud.style = position + size + cursor;
 		document.body.appendChild(cloud);
+		cloud.onclick = () => {
+			window.location = 'External/Landing Clouds Math/Clouds.pdf';
+		};
 	}
 }
 
