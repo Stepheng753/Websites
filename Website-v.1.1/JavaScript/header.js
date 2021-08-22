@@ -1,6 +1,6 @@
 var theme = 1;
 
-window.onload = function () {
+window.onload = () => {
 	try {
 		let parameters = window.location.search.split('?')[1].split('&');
 		choosePage(parameters[0].substring(parameters[0].indexOf('=') + 1, parameters[0].length));
@@ -11,12 +11,13 @@ window.onload = function () {
 	} finally {
 		mouseLoc();
 		borderNav();
+		sliderControls();
 	}
 };
 
 function mouseLoc() {
 	let style;
-	document.body.onmousemove = function (event) {
+	document.body.onmousemove = (event) => {
 		let pageX = event.pageX;
 		let pageY = event.pageY;
 		let diameter = 25;
@@ -28,12 +29,12 @@ function mouseLoc() {
 		style = position + border + size;
 		mouseFollower.style = style;
 	};
-	document.body.onmousedown = function (event) {
+	document.body.onmousedown = () => {
 		let mouseFollower = document.getElementById('mouseFollower');
 		let color = 'hsl(' + Math.floor(Math.random() * 360) + ', 100%, 25%);';
 		mouseFollower.style = style + 'background-color: ' + color + '; border: 2pt solid ' + color + ';';
 	};
-	document.body.onmouseup = function (event) {
+	document.body.onmouseup = () => {
 		let mouseFollower = document.getElementById('mouseFollower');
 		mouseFollower.style = style;
 	};
@@ -43,7 +44,7 @@ function borderNav() {
 	let nav = document.querySelector('.nav');
 	let block = document.getElementsByClassName('block');
 	for (let i = 0; i < block.length; i++) {
-		block[i].onmouseover = function () {
+		block[i].onmouseover = () => {
 			nav.style.setProperty('border', 'hidden');
 			block[i].style.setProperty('border', '2pt solid var(--border-color);');
 			for (let j = 0; j < block.length; j++) {
@@ -58,7 +59,7 @@ function borderNav() {
 				}
 			}
 		};
-		block[i].onmouseout = function () {
+		block[i].onmouseout = () => {
 			nav.style.setProperty('border', '2pt solid var(--border-color);');
 		};
 	}
