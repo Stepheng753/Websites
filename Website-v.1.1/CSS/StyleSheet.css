@@ -12,4 +12,5 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background-image: linear-gradient(var(--color-grad-1), var(--color-grad-2), var(--color-grad-3));
+	overflow: hidden;
 }
