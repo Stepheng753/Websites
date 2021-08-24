@@ -1,13 +1,20 @@
 function choosePage(page = '') {
-	let redirects = document.getElementsByClassName('redirects');
-	let index = 0;
-	while (redirects.length > 0 && index < redirects.length) {
-		if (redirects[index].getAttribute('id') == page) {
-			redirects[index].style.setProperty('visibility', 'visible');
-			index++;
-		} else {
-			redirects[index].parentElement.removeChild(redirects[index]);
+	removeRedirects();
+	let parentRedirects = document.getElementById('allRedirects');
+	for (let i = 0; i < allRedirects.length; i++) {
+		if (allRedirects[i].getAttribute('id') == page) {
+			parentRedirects.appendChild(allRedirects[i]);
+			allRedirects[i].style.setProperty('visibility', 'visible');
 		}
+	}
+	if (document.getElementById('allSlides')) sliderControls();
+}
+
+function removeRedirects() {
+	let parentRedirects = document.getElementById('allRedirects');
+	let childrenRedirects = [...parentRedirects.children];
+	for (let i = 0; i < childrenRedirects.length; i++) {
+		parentRedirects.removeChild(childrenRedirects[i]);
 	}
 }
 

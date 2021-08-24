@@ -1,18 +1,16 @@
-var theme = 1;
+var allRedirects;
 
 window.onload = () => {
-	try {
+	allRedirects = [...document.getElementsByClassName('redirects')];
+	if (window.location.search.split('?')[1]) {
 		let parameters = window.location.search.split('?')[1].split('&');
-		choosePage(parameters[0].substring(parameters[0].indexOf('=') + 1, parameters[0].length));
-		changeTheme(parameters[1].substring(parameters[1].indexOf('=') + 1, parameters[1].length));
-	} catch {
-		choosePage();
-		changeTheme(theme);
-	} finally {
-		mouseLoc();
-		borderNav();
-		sliderControls();
+		console.log(parameters[0].substring(parameters[0].indexOf('ref=') + 4, parameters[0].length));
+		choosePage(parameters[0].substring(parameters[0].indexOf('ref=') + 4, parameters[0].length));
+	} else {
+		choosePage('home');
 	}
+	mouseLoc();
+	borderNav();
 };
 
 function mouseLoc() {
@@ -66,9 +64,7 @@ function borderNav() {
 }
 
 function changeTheme(index) {
-	theme = index;
 	let cssColors = document.querySelector(':root');
-	document.getElementById('theme-' + index).setAttribute('checked', 'true');
 	if (index == 1) {
 		cssColors.style.setProperty('--border-color', '#075a79');
 		cssColors.style.setProperty('--block-color', '#568ea3');
