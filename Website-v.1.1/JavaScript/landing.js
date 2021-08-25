@@ -1,4 +1,7 @@
 window.onload = () => {
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+		window.location = 'https://stepheng753.com/Website/Website-v.1.0/Home.html';
+	}
 	document.onkeydown = moveBike;
 	makeClouds();
 	setInterval(() => {
