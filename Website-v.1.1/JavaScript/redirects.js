@@ -7,7 +7,8 @@ function choosePage(page = '') {
 			allRedirects[i].style.setProperty('visibility', 'visible');
 		}
 	}
-	if (document.getElementById('allSlides')) sliderControls();
+	if (document.getElementById('allSlides') && document.getElementById('sliderControls').childElementCount == 0)
+		sliderControls();
 }
 
 function removeRedirects() {
@@ -33,7 +34,7 @@ function sliderControls() {
 	sliderCircles[0].style.setProperty('background-color', 'var(--title-color)');
 
 	let movePercent = 100 / sliderCircles.length;
-	let first = document.querySelector('#allSlides #firstSlide');
+	let first = document.getElementById('firstSlide');
 	for (let i = 0; i < sliderCircles.length; i++) {
 		sliderCircles[i].onclick = () => {
 			console.log(i * movePercent);
