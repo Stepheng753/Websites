@@ -27,6 +27,7 @@ function sliderControls() {
 	for (let i = 0; i < allSlides.childElementCount; i++) {
 		let circle = document.createElement('div');
 		circle.className = 'sliderCircle';
+		circle.style.setProperty('cursor', 'pointer');
 		sliderControls.appendChild(circle);
 	}
 	let sliderCircles = sliderControls.children;

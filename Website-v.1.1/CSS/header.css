@@ -74,7 +74,7 @@
 	height: 60vh;
 	width: 45vw;
 	transition: left 1s;
-	z-index: 2;
+	z-index: 4;
 	/* border: 2pt dashed black; */
 	border-radius: 1000px;
 }
@@ -108,7 +108,7 @@
 #hoverRadius:hover .block:hover {
 	border: 2pt solid var(--border-color);
 	transform: scale(1.2);
-	z-index: 3;
+	z-index: 5;
 }
 
 .block {
