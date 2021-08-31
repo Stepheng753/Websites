@@ -3,11 +3,30 @@ window.onload = () => {
 		window.location = 'https://stepheng753.com/Website/Website-v.1.0/Home.html';
 	}
 	document.onkeydown = moveBike;
+	document.onkeyup = resizeKeys;
+	hoverBuildings();
 	makeClouds();
 	setInterval(() => {
 		makeClouds();
 	}, 10000);
 };
+
+function hoverBuildings() {
+	let house = document.getElementById('house');
+	let school = document.getElementById('school');
+	house.onmouseover = () => {
+		house.style.setProperty('transform', 'translateY(-2.5vh) scale(1.2)');
+	};
+	house.onmouseout = () => {
+		house.style.setProperty('transform', 'scale(1)');
+	};
+	school.onmouseover = () => {
+		school.style.setProperty('transform', 'translateY(-2.5vh) scale(1.2)');
+	};
+	school.onmouseout = () => {
+		school.style.setProperty('transform', 'scale(1)');
+	};
+}
 
 function makeClouds() {
 	const numClouds = Math.floor(Math.random() * 6) + 2;
@@ -49,6 +68,9 @@ function moveBike(event) {
 	let bike = document.getElementById('biker');
 	let house = document.getElementById('house');
 	let school = document.getElementById('school');
+	let leftKey = document.getElementById('lkey');
+	let rightKey = document.getElementById('rkey');
+	let upKey = document.getElementById('ukey');
 	let houseRange = [5, 20];
 	let schoolRange = [63, 85];
 
@@ -61,16 +83,26 @@ function moveBike(event) {
 	if ((event.key == 'ArrowLeft' || event.key.toLowerCase() == 'a') && leftVal - speed > 0) {
 		bike.style.setProperty('left', leftVal - speed + 'vw');
 		bike.style.setProperty('transform', 'scaleX(1)');
+		leftKey.style.setProperty('transform', 'scale(1.5)');
+		rightKey.style.setProperty('transform', 'scale(1)');
 	}
 	if ((event.key == 'ArrowRight' || event.key.toLowerCase() == 'd') && leftVal + bikeWidth + speed < 100) {
 		bike.style.setProperty('left', leftVal + speed + 'vw');
 		bike.style.setProperty('transform', 'scaleX(-1)');
+		leftKey.style.setProperty('transform', 'scale(1)');
+		rightKey.style.setProperty('transform', 'scale(1.5)');
 	}
-	if (leftVal <= houseRange[1] && leftVal >= houseRange[0]) house.style.setProperty('transform', 'scale(1.2)');
-	else house.style.setProperty('transform', 'scale(1)');
-
-	if (leftVal <= schoolRange[1] && leftVal >= schoolRange[0]) school.style.setProperty('transform', 'scale(1.2)');
-	else school.style.setProperty('transform', 'scale(1)');
+	if (leftVal <= houseRange[1] && leftVal >= houseRange[0]) {
+		house.style.setProperty('transform', 'translateY(-2.5vh) scale(1.2)');
+		upKey.style.setProperty('transform', 'translateY(-7vh) scale(1.5)');
+	} else if (leftVal <= schoolRange[1] && leftVal >= schoolRange[0]) {
+		school.style.setProperty('transform', 'translateY(-4vh) scale(1.2)');
+		upKey.style.setProperty('transform', 'translateY(-7vh) scale(1.5)');
+	} else {
+		house.style.setProperty('transform', 'scale(1)');
+		school.style.setProperty('transform', 'scale(1)');
+		upKey.style.setProperty('transform', 'translateY(-7vh) scale(1)');
+	}
 
 	if (
 		(event.key == 'ArrowUp' || event.key.toLowerCase() == 'w' || event.key == 'Enter' || event.key == ' ') &&
@@ -94,4 +126,11 @@ function convertPXToVW(px) {
 
 function convertPXToVH(px) {
 	return px * (100 / document.documentElement.clientHeight);
+}
+
+function resizeKeys(event) {
+	let leftKey = document.getElementById('lkey');
+	let rightKey = document.getElementById('rkey');
+	leftKey.style.setProperty('transform', 'scale(1)');
+	rightKey.style.setProperty('transform', 'scale(1)');
 }

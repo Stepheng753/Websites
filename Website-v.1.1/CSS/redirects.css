@@ -52,6 +52,16 @@ a {
 	overflow-y: scroll;
 }
 
+#tutoring {
+	position: relative;
+	width: 1000px;
+	height: 450px;
+	border: none;
+	top: 5vh;
+	padding: 0;
+	overflow-y: scroll;
+}
+
 #projects {
 	position: absolute;
 	display: flex;

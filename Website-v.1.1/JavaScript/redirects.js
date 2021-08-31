@@ -7,6 +7,12 @@ function choosePage(page = '') {
 			allRedirects[i].style.setProperty('visibility', 'visible');
 		}
 	}
+	let title = document.querySelector('#title h1');
+	if (page == 'tutoring') {
+		title.innerHTML = 'CrossRoads Tutoring';
+	} else {
+		title.innerHTML = 'Stephen Giang';
+	}
 	if (document.getElementById('allSlides') && document.getElementById('sliderControls').childElementCount == 0)
 		sliderControls();
 }
