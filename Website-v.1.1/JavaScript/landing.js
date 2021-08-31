@@ -109,7 +109,7 @@ function moveBike(event) {
 		leftVal <= houseRange[1] &&
 		leftVal >= houseRange[0]
 	) {
-		window.location = 'Home.html?ref=home&theme=1';
+		window.location = 'Home';
 	}
 	if (
 		(event.key == 'ArrowUp' || event.key.toLowerCase() == 'w' || event.key == 'Enter' || event.key == ' ') &&
