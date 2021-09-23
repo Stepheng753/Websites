@@ -12,6 +12,7 @@ window.onload = () => {
 	} else {
 		choosePage('home');
 	}
+	changeTheme(Math.floor(Math.random() * 4) + 1);
 	mouseLoc();
 	borderNav();
 };
@@ -104,4 +105,5 @@ function changeTheme(index) {
 		cssColors.style.setProperty('--color-grad-2', '#fff');
 		cssColors.style.setProperty('--color-grad-3', '#a3001b');
 	}
+	document.getElementById('theme-' + index).setAttribute('checked', true);
 }
