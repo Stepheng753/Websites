@@ -1,5 +1,6 @@
 <?php
-
+ini_set( 'display_errors', 1 );
+error_reporting( E_ALL );
 $name = $_GET["name"];
 $from = $_GET['fromEmail'];
 $to = $_GET["toEmail"];
