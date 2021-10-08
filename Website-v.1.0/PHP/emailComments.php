@@ -18,7 +18,7 @@ else {
     echo 'Email Has NOT Been Sent <br>';
 }
 
-$home = "https://stepheng753.com/Website/Home.html";
+$home = "../Home.html";
 echo "<br><a href = " .$home .">Back Home</a>";
 
 ?>
