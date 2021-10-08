@@ -5,12 +5,12 @@ $from = $_GET['fromEmail'];
 $to = $_GET["toEmail"];
 $subject = $_GET["subject"];
 $message = $_GET["message"];
-$headers = "From: " .$name;
-if (empty($_GET['emailAddress']) ) {
+$headers = "From: " .$from;
+if (empty($from)) {
     $headers = "From: NoEmail";
 }
 
-if ( !empty($_GET['message'])  ) {
+if ( !empty($message)  ) {
     for($x = 0; $x < $_GET['num1']; $x++) {
         mail($to, $subject, $message, $headers);
     }
