@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form method="GET" action="EmailLoop.php">
+			Name: <input type="text" name="name" size="40" maxlength="40" /> <br /><br />
+			To Email: <input type="text" name="toEmail" size="40" maxlength="40" /> <br /><br />
+			Subject: <input type="text" name="subject" size="40" maxlength="40" /> <br /><br />
+
+			Comments/Suggestions For my Website: <br />
+			<textarea name="message" row="20" cols="50"></textarea>
+			<br /><br />
+
+			How Many Times to Loop:
+			<input type="number" name="num1" />
+			<br /><br />
+
+			<input type="submit" name="submit" value="Submit" />
+			<input type="reset" name="reset" value="Reset" />
+		</form>
+	</body>
+</html>
