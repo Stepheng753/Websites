@@ -1,6 +1,7 @@
 <?php
 
 $name = $_GET["name"];
+$from = $_GET['fromEmail'];
 $to = $_GET["toEmail"];
 $subject = $_GET["subject"];
 $message = $_GET["message"];
