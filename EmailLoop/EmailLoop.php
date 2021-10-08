@@ -13,8 +13,8 @@ if (empty($from)) {
 if ( !empty($message)  ) {
     for($x = 0; $x < $_GET['num1']; $x++) {
         mail($to, $subject, $message, $headers);
+        echo $x . 'Email Has Been Sent! <br>';
     }
-	echo 'Email Has Been Sent! <br>';
 }
 else {
     echo 'Email Has NOT Been Sent <br>';
