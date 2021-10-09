@@ -22,6 +22,7 @@
 // }
 
 mail('StephenG753@Gmail.com', 'Hello', 'Hi');
+echo "Done";
 
 $home = "index.html";
 echo "<br><a href = " .$home .">Back Home</a>";
