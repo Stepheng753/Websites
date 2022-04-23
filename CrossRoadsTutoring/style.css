@@ -28,13 +28,40 @@
 }
 
 #welcome {
-	animation-delay: 1s;
+	animation-delay: 0s;
 }
 
 #question {
-	animation-delay: 1.5s;
+	animation-delay: 1s;
 }
 
-.choices {
+.choice {
 	margin-left: 50px;
+}
+
+.choice > * {
+	display: inline-block;
+	margin-top: 0;
+}
+
+.letter {
+	border: 1px solid #000;
+	border-radius: 100%;
+	padding: 10px;
+
+	margin-right: 10px;
+	height: 1em;
+	width: 1em;
+	text-align: center;
+}
+
+.letter:hover {
+	background-color: #3fbd15;
+	color: #fff;
+	cursor: pointer;
+}
+
+#minMax {
+	max-width: 640px;
+	width: 80%;
 }
