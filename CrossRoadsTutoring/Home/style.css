@@ -12,7 +12,7 @@
 
 .fade-up {
 	opacity: 0;
-	animation: fadeUp 4s;
+	animation: fadeUp 1s;
 	animation-fill-mode: forwards;
 }
 
@@ -44,6 +44,11 @@
 	margin-top: 0;
 }
 
+a {
+	color: #000;
+	text-decoration: none;
+}
+
 .letter {
 	border: 1px solid #000;
 	border-radius: 100%;
@@ -55,9 +60,18 @@
 	text-align: center;
 }
 
-.letter:hover {
+.option {
+	padding: 10px;
+}
+
+.highlight-letter {
 	background-color: #3fbd15;
 	color: #fff;
+	cursor: pointer;
+}
+
+.bold-option {
+	font-weight: bold;
 	cursor: pointer;
 }
 
