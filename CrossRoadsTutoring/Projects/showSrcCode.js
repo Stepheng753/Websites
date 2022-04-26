@@ -28,6 +28,7 @@ function convertSrcCodeToString(src) {
 		.replaceAll('<', '&lt;')
 		.replaceAll('>', '&gt;')
 		.replaceAll('\n', '<br>')
-		.replaceAll('\t', '&nbsp;&nbsp;&nbsp;&nbsp;');
+		.replaceAll('\t', '&nbsp;&nbsp;&nbsp;&nbsp;')
+		.replaceAll(' ', '&nbsp;');
 	return src;
 }
