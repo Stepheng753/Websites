@@ -8,9 +8,15 @@ window.onload = function () {
 		})
 		.then((json) => {
 			projectsJSON = json;
-			getSrcCode(projectsJSON.CrossRoadsTutoringProjects.Files[''][0]);
+			getSrcCode(getFilePath('CurrWebsiteProjects', 0, 1));
 		});
 };
+
+function getFilePath(project, folderIndex, fileIndex) {
+	let directory = projectsJSON[project].Directory;
+	let files = projectsJSON[project].Files[folderIndex];
+	return directory + files.Subdirectory + files.File[fileIndex];
+}
 
 function getSrcCode(file) {
 	fetch(file)

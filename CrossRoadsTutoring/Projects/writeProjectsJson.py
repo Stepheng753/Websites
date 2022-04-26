@@ -10,14 +10,16 @@ data = json.load(file)
 
 for project in data:
     curr_project = data[project]
-    directory = curr_project['Directory'];
-    curr_project['Files'] = {}
+    directory = curr_project['Directory']
+    curr_project['Files'] = []
 
     sub_dir_dict = {}
     for path, subdirs, files in os.walk(directory):
         for name in files:
             file = os.path.join(path, name)
-            sub_dir = file[len(directory): file.find('/', len(file) - len(name) - 1)]
+            sub_dir = file[len(directory): file.find('/', len(file) - len(name) - 1)] + '/'
+            sub_dir = './' if sub_dir == '/' else sub_dir
+
 
             if (sub_dir in sub_dir_dict):
                 sub_dir_dict[sub_dir].append(name)
@@ -26,7 +28,7 @@ for project in data:
                 sub_dir_dict[sub_dir] = [name]
 
     for key in sub_dir_dict:
-        curr_project['Files'][key] = sub_dir_dict[key]
+        curr_project['Files'].append({'Subdirectory' : key, 'File' : sub_dir_dict[key]})
 
 
 with open(filename, 'w') as write_file:
