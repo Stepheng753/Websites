@@ -1,0 +1,52 @@
+{
+	"ChessAI": {
+		"Description": "Chess Game with UI and AI",
+		"Directory": "../../../Personal-Projects/Web Development/p5.js/ChessAI/ChessAIv3/",
+		"Files": {
+			"": [
+				"ChessAI.html",
+				"chessAI.js",
+				"chessGame.js",
+				"helperFunctions.js",
+				"index.js",
+				"piece.js",
+				"styles.css"
+			],
+			".vscode": ["launch.json"],
+			"AI Logic": [
+				"chessAI.aux",
+				"chessAI.log",
+				"chessAI.pdf",
+				"chessAI.synctex.gz",
+				"chessAI.tex",
+				"example1.png"
+			],
+			"Assets": ["ChessPieces.png"]
+		},
+		"Name": "Chess AI"
+	},
+	"CrossRoadsTutoringProjects": {
+		"Description": "Project Files",
+		"Directory": "./",
+		"Files": {
+			"": ["Projects.html", "projectsToDisplay.json", "showSrcCode.js", "style.css", "writeProjectsJson.py"]
+		},
+		"Name": "CrossRoads Tutoring Projects"
+	},
+	"SortingAlgorithms": {
+		"Description": "Sorting Algorithms UI",
+		"Directory": "../../../Personal-Projects/Web Development/p5.js/Sorting Algorithms/",
+		"Files": {
+			"BubbleSort": ["BubbleSort.html", "BubbleSort.js", "SlowBubbleSort.html", "SlowBubbleSort.js"],
+			"Insertion Sort": [
+				"InsertionSort.html",
+				"InsertionSort.js",
+				"SlowInsertionSort.html",
+				"SlowInsertionSort.js"
+			],
+			"MergeSort": ["MergeSort.html", "MergeSort.js", "SlowMergeSort.html", "SlowMergeSort.js"],
+			"QuickSort": ["QuickSort.html", "QuickSort.js", "SlowQuickSort.html", "SlowQuickSort.js"]
+		},
+		"Name": "Sorting Algorithms"
+	}
+}
