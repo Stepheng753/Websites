@@ -23,7 +23,7 @@ function getSrcCode(file) {
 }
 
 function convertSrcCodeToString(src) {
-	src = src.replaceAll('</body>', '\n\t</body>');
+	src = src.replaceAll('></body>', '>\n\t</body>');
 	src = src
 		.replaceAll('<', '&lt;')
 		.replaceAll('>', '&gt;')
