@@ -2,7 +2,7 @@ let innerCode = String(document.documentElement.getInnerHTML());
 
 window.onload = function () {
 	let code = document.getElementById('code');
-	// code.innerHTML = convertHtmlToString(innerCode);
+	code.innerHTML = convertHtmlToString(innerCode);
 };
 
 function convertHtmlToString(html) {
