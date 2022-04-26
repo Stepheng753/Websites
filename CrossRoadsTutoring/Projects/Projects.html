@@ -11,7 +11,14 @@
 		<div id="explorer"></div>
 		<code id="code"> </code>
 
-		<script src="./ListAllProjects.js"></script>
-		<script src="./insertCode.js"></script>
+		<script src="./displayCode.js"></script>
+		<script>
+			let innerCode = String(document.documentElement.getInnerHTML());
+
+			window.onload = function () {
+				let code = document.getElementById('code');
+				code.innerHTML = convertHtmlToString(innerCode);
+			};
+		</script>
 	</body>
 </html>

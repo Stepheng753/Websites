@@ -1,9 +1,19 @@
-let innerCode = String(document.documentElement.getInnerHTML());
+let testFile;
+fetch('./ProjectsToDisplay.json')
+	.then((response) => {
+		return response.json();
+	})
+	.then((file) => {
+		printFile(file.Projects[0].Directory + file.Projects[0].Files[1]);
+	});
 
-window.onload = function () {
-	let code = document.getElementById('code');
-	code.innerHTML = convertHtmlToString(innerCode);
-};
+function printFile(file) {
+	fetch(file)
+		.then((response) => {
+			return response.text();
+		})
+		.then((text) => (testFile = text));
+}
 
 function convertHtmlToString(html) {
 	html = html.replace('</body>', '\n</body>');
@@ -29,19 +39,4 @@ function convertHtmlToString(html) {
 		i = html.indexOf('<br>', i) + 1;
 	}
 	return html;
-}
-
-function findAllSubstring(str, subStr) {
-	let i = 0;
-	let j = 0;
-	let result = [];
-	while (i < str.length) {
-		j = str.indexOf(subStr, i);
-		if (j == -1) {
-			break;
-		}
-		result.push(j);
-		i = j + 1;
-	}
-	return result;
 }
