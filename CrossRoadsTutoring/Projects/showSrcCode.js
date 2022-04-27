@@ -21,9 +21,6 @@ window.onload = function () {
 					filePathsStr +=
 						'<div class="subdirectory">' + projectsJSON[projectKey].Files[j].Subdirectory + '</div>';
 					for (let k = 0; k < projectsJSON[projectKey].Files[j].File.length; k++) {
-						isHTML =
-							projectsJSON[projectKey].Files[j].File[k].includes('.html') ||
-							projectsJSON[projectKey].Files[j].File[k].includes('.py');
 						filePathsStr +=
 							'<div class="file" onclick="setSrcCode(getFilePath(\'' +
 							projectKey +
@@ -31,8 +28,7 @@ window.onload = function () {
 							j +
 							',' +
 							k +
-							'), code,' +
-							isHTML +
+							'), code, true' +
 							')' +
 							"; setOutput('" +
 							projectKey +
@@ -45,6 +41,7 @@ window.onload = function () {
 					}
 				}
 			}
+			console.log(filePathsStr);
 			filePaths.innerHTML = convertSrcCodeToString(filePathsStr);
 		});
 };
@@ -52,7 +49,6 @@ window.onload = function () {
 function getFilePath(project, folderIndex, fileIndex) {
 	let directory = projectsJSON[project].Directory;
 	let files = projectsJSON[project].Files[folderIndex];
-	console.log(files.Subdirectory, ':::', directory + files.Subdirectory + files.File[fileIndex]);
 	return directory + files.Subdirectory + files.File[fileIndex];
 }
 
@@ -65,6 +61,7 @@ function setSrcCode(file, domElement, domHTML) {
 				return response.text();
 			})
 			.then((text) => {
+				console.log(text);
 				domElement.innerHTML = convertSrcCodeToString(text, domHTML);
 			});
 	}
@@ -75,11 +72,11 @@ function setOutput(project, folderIndex) {
 	let outputFound = false;
 	for (let i = 0; i < files.File.length; i++) {
 		let file = files.File[i];
-		if (output.data.includes(file)) {
+		if (output.src.includes(file)) {
 			return;
 		}
 		if (file.includes('.html')) {
-			output.data = getFilePath(project, folderIndex, i);
+			output.src = getFilePath(project, folderIndex, i);
 			outputFound = true;
 		}
 	}

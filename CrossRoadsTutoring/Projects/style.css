@@ -47,6 +47,7 @@ body {
 	width: calc((100% - 15% - 5%) / 2);
 	margin: 10px;
 	color: #fff;
+	border: none;
 	overflow-y: auto;
 }
 
