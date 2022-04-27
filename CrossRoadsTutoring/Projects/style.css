@@ -3,34 +3,60 @@
 	--explorer-color: #1a1b26;
 }
 
+html,
 body {
 	background-color: var(--background-color);
 	margin: 0;
+	padding: 0;
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
 	display: flex;
 }
 
-#explorer {
+.dark-sidebar {
 	background-color: var(--explorer-color);
 	margin: 0;
+	padding: 10px;
+
+	min-height: 100%;
 	height: 100vh;
 	min-width: 50px;
 	width: 5%;
-}
 
-#code {
-	height: 800px;
-	width: 800px;
-	margin: 10px;
-	/* position: relative;
-	left: 100px;
-	top: 100px; */
 	color: #fff;
 }
 
-.indent {
-	/* margin-left: 20px; */
-	margin: 0 0 0 20px;
+#filePaths {
+	border-left: #fff 1px solid;
+	min-width: 100px;
+	width: 15%;
+	overflow-y: auto;
+}
+
+#code {
+	height: calc(100% - 20px);
+	width: calc((100% - 15% - 5%) / 2);
+	margin: 10px;
+	color: #fff;
+	overflow-y: auto;
+}
+
+#output {
+	height: calc(100% - 20px);
+	width: calc((100% - 15% - 5%) / 2);
+	margin: 10px;
+	color: #fff;
+	overflow-y: auto;
+}
+
+.subdirectory {
+	padding-left: 20px;
+	margin-bottom: 10px;
+}
+
+.file {
+	padding-left: 40px;
+	cursor: pointer;
+	margin: 0;
 }
