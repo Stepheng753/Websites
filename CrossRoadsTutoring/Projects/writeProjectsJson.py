@@ -27,7 +27,7 @@ for project in data:
             else: 
                 sub_dir_dict[sub_dir] = [name]
 
-    for key in sub_dir_dict:
+    for key in sorted(sub_dir_dict):
         curr_project['Files'].append({'Subdirectory' : key, 'File' : sub_dir_dict[key]})
 
 

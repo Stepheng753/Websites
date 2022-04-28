@@ -16,6 +16,10 @@
 				"Subdirectory": "./"
 			},
 			{
+				"File": ["launch.json"],
+				"Subdirectory": ".vscode/"
+			},
+			{
 				"File": [
 					"chessAI.aux",
 					"chessAI.log",
@@ -25,10 +29,6 @@
 					"example1.png"
 				],
 				"Subdirectory": "AI Logic/"
-			},
-			{
-				"File": ["launch.json"],
-				"Subdirectory": ".vscode/"
 			},
 			{
 				"File": ["ChessPieces.png"],
@@ -42,20 +42,12 @@
 		"Directory": "../../../Personal-Projects/Web Development/p5.js/Circles/",
 		"Files": [
 			{
-				"File": [
-					"Circle.js",
-					"FullCanvas.js",
-					"Sky.jpg",
-					"Welcome.html",
-					"Welcome.js",
-					"Welcome.png",
-					"Welcome1.png"
-				],
-				"Subdirectory": "Welcome/"
+				"File": ["Circle.js", "FullColor.html", "FullColor.js", "Porter.jpg", "US.jpg"],
+				"Subdirectory": "FullColor/"
 			},
 			{
-				"File": ["Circle.js", "FullCanvas.js", "FullColor.html", "FullColor.js", "Porter.jpg", "US.jpg"],
-				"Subdirectory": "FullColor/"
+				"File": ["Circle.js", "Sky.jpg", "Welcome.html", "Welcome.js", "Welcome.png", "Welcome1.png"],
+				"Subdirectory": "Welcome/"
 			}
 		],
 		"Name": "Circles"
@@ -98,20 +90,20 @@
 		"Directory": "../../../Personal-Projects/Web Development/p5.js/Sorting Algorithms/",
 		"Files": [
 			{
-				"File": ["MergeSort.html", "MergeSort.js", "SlowMergeSort.html", "SlowMergeSort.js"],
-				"Subdirectory": "MergeSort/"
+				"File": ["BubbleSort.html", "BubbleSort.js"],
+				"Subdirectory": "BubbleSort/"
 			},
 			{
-				"File": ["QuickSort.html", "QuickSort.js", "SlowQuickSort.html", "SlowQuickSort.js"],
-				"Subdirectory": "QuickSort/"
-			},
-			{
-				"File": ["InsertionSort.html", "InsertionSort.js", "SlowInsertionSort.html", "SlowInsertionSort.js"],
+				"File": ["InsertionSort.html", "InsertionSort.js"],
 				"Subdirectory": "Insertion Sort/"
 			},
 			{
-				"File": ["BubbleSort.html", "BubbleSort.js", "SlowBubbleSort.html", "SlowBubbleSort.js"],
-				"Subdirectory": "BubbleSort/"
+				"File": ["MergeSort.html", "MergeSort.js"],
+				"Subdirectory": "MergeSort/"
+			},
+			{
+				"File": ["QuickSort.html", "QuickSort.js"],
+				"Subdirectory": "QuickSort/"
 			}
 		],
 		"Name": "Sorting Algorithms"
