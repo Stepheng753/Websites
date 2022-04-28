@@ -95,7 +95,7 @@
 	},
 	"SlidePuzzle": {
 		"Description": "This is a slide puzzle game",
-		"Directory": "../../../Personal-Projects/Web Development/p5.js/SlidePuzzle/",
+		"Directory": "https://stepheng753.com/Personal-Projects/Web%20Development/p5.js/SlidePuzzle/",
 		"Files": [
 			{
 				"File": ["Icon.png", "slidePuzzle.js", "slidePuzzle.php"],
@@ -129,7 +129,7 @@
 	},
 	"TimesTable": {
 		"Description": "This is a times table game",
-		"Directory": "../../../Personal-Projects/Web Development/p5.js/TimesTable/",
+		"Directory": "https://stepheng753.com/Personal-Projects/Web%20Development/p5.js/TimesTable/",
 		"Files": [
 			{
 				"File": ["TimesTable.js", "TimesTable.php"],

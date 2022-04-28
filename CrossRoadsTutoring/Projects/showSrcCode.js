@@ -66,6 +66,9 @@ function displayFilePaths() {
 }
 
 function displayCode(file, domElement, domHTML) {
+	if (file.includes('.php')) {
+		return;
+	}
 	if (file.includes('.png') || file.includes('.jpg') || file.includes('.jpeg')) {
 		domElement.innerHTML = '<img src="' + file + '" alt="' + file + '">';
 	} else {
