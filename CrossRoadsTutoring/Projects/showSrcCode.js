@@ -1,6 +1,7 @@
 let code = document.getElementById('code');
 let filePaths = document.getElementById('filePaths');
 let output = document.getElementById('output');
+let currProjectSelected = '';
 let projectsJSON;
 
 window.onload = function () {
@@ -10,39 +11,9 @@ window.onload = function () {
 		})
 		.then((json) => {
 			projectsJSON = json;
-			setSrcCode(getFilePath('CurrWebsiteProjects', 0, 1), code, true);
 		})
 		.then(() => {
-			let filePathsStr = '';
-			for (let i = 0; i < Object.keys(projectsJSON).length; i++) {
-				let projectKey = Object.keys(projectsJSON)[i];
-				filePathsStr += projectsJSON[projectKey].Name + '\n';
-				for (let j = 0; j < projectsJSON[projectKey].Files.length; j++) {
-					filePathsStr +=
-						'<div class="subdirectory">' + projectsJSON[projectKey].Files[j].Subdirectory + '</div>';
-					for (let k = 0; k < projectsJSON[projectKey].Files[j].File.length; k++) {
-						filePathsStr +=
-							'<div class="file" onclick="setSrcCode(getFilePath(\'' +
-							projectKey +
-							"'," +
-							j +
-							',' +
-							k +
-							'), code, true' +
-							')' +
-							"; setOutput('" +
-							projectKey +
-							"'," +
-							j +
-							')">' +
-							projectsJSON[projectKey].Files[j].File[k] +
-							'</div>' +
-							'\n';
-					}
-				}
-			}
-			console.log(filePathsStr);
-			filePaths.innerHTML = convertSrcCodeToString(filePathsStr);
+			displayFilePaths();
 		});
 };
 
@@ -52,7 +23,49 @@ function getFilePath(project, folderIndex, fileIndex) {
 	return directory + files.Subdirectory + files.File[fileIndex];
 }
 
-function setSrcCode(file, domElement, domHTML) {
+function displayFilePaths() {
+	let filePathsStr = '';
+	for (let projectCt = 0; projectCt < Object.keys(projectsJSON).length; projectCt++) {
+		let projectKey = Object.keys(projectsJSON)[projectCt];
+		let setCurrProjectSelectedStr = "setCurrProjectSelected('" + projectKey + "');";
+		filePathsStr +=
+			'<div class="Project-Name" onclick="' +
+			setCurrProjectSelectedStr +
+			' ">' +
+			projectsJSON[projectKey].Name +
+			'</div>' +
+			'\n';
+
+		if (currProjectSelected == projectKey) {
+			for (let subDirCt = 0; subDirCt < projectsJSON[projectKey].Files.length; subDirCt++) {
+				filePathsStr +=
+					'<div class="subdirectory">' +
+					projectsJSON[projectKey].Files[subDirCt].Subdirectory +
+					'</div>' +
+					'\n';
+
+				for (let fileCt = 0; fileCt < projectsJSON[projectKey].Files[subDirCt].File.length; fileCt++) {
+					setSrcCodeStr =
+						"displayCode(getFilePath('" + projectKey + "', " + subDirCt + ', ' + fileCt + '), code, true);';
+					setOutputStr = "displayOutput('" + projectKey + "', " + subDirCt + ');';
+
+					filePathsStr +=
+						'<div class="file" onclick="' +
+						setSrcCodeStr +
+						setOutputStr +
+						'">' +
+						projectsJSON[projectKey].Files[subDirCt].File[fileCt] +
+						'</div>' +
+						'\n';
+				}
+			}
+		}
+	}
+	console.log(filePathsStr);
+	filePaths.innerHTML = stringToHTML(filePathsStr);
+}
+
+function displayCode(file, domElement, domHTML) {
 	if (file.includes('.png') || file.includes('.jpg') || file.includes('.jpeg')) {
 		domElement.innerHTML = '<img src="' + file + '" alt="' + file + '">';
 	} else {
@@ -61,13 +74,12 @@ function setSrcCode(file, domElement, domHTML) {
 				return response.text();
 			})
 			.then((text) => {
-				console.log(text);
-				domElement.innerHTML = convertSrcCodeToString(text, domHTML);
+				domElement.innerHTML = stringToHTML(text, domHTML);
 			});
 	}
 }
 
-function setOutput(project, folderIndex) {
+function displayOutput(project, folderIndex) {
 	let files = projectsJSON[project].Files[folderIndex];
 	let outputFound = false;
 	for (let i = 0; i < files.File.length; i++) {
@@ -75,7 +87,7 @@ function setOutput(project, folderIndex) {
 		if (output.src.includes(file)) {
 			return;
 		}
-		if (file.includes('.html')) {
+		if (file.includes('.html') || file.includes('.php')) {
 			output.src = getFilePath(project, folderIndex, i);
 			outputFound = true;
 		}
@@ -85,7 +97,7 @@ function setOutput(project, folderIndex) {
 	}
 }
 
-function convertSrcCodeToString(src, isHTML = false) {
+function stringToHTML(src, isHTML = false) {
 	if (isHTML) {
 		src = src
 			.replaceAll('></body>', '>\n\t</body>')
@@ -95,4 +107,13 @@ function convertSrcCodeToString(src, isHTML = false) {
 	}
 	src = src.replaceAll('\n', '<br>').replaceAll('\t', '&nbsp;&nbsp;&nbsp;&nbsp;');
 	return src;
+}
+
+function setCurrProjectSelected(projectKey) {
+	if (currProjectSelected == projectKey) {
+		currProjectSelected = '';
+	} else {
+		currProjectSelected = projectKey;
+	}
+	displayFilePaths();
 }

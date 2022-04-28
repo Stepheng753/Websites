@@ -1,104 +1,141 @@
 {
-    "ChessAI": {
-        "Description": "Chess Game with UI and AI",
-        "Directory": "../../../Personal-Projects/Web Development/p5.js/ChessAI/ChessAIv3/",
-        "Files": [
-            {
-                "File": [
-                    "ChessAI.html",
-                    "chessAI.js",
-                    "chessGame.js",
-                    "helperFunctions.js",
-                    "index.js",
-                    "piece.js",
-                    "styles.css"
-                ],
-                "Subdirectory": "./"
-            },
-            {
-                "File": [
-                    "chessAI.aux",
-                    "chessAI.log",
-                    "chessAI.pdf",
-                    "chessAI.synctex.gz",
-                    "chessAI.tex",
-                    "example1.png"
-                ],
-                "Subdirectory": "AI Logic/"
-            },
-            {
-                "File": [
-                    "launch.json"
-                ],
-                "Subdirectory": ".vscode/"
-            },
-            {
-                "File": [
-                    "ChessPieces.png"
-                ],
-                "Subdirectory": "Assets/"
-            }
-        ],
-        "Name": "Chess AI"
-    },
-    "CurrWebsiteProjects": {
-        "Description": "Project Files",
-        "Directory": "./",
-        "Files": [
-            {
-                "File": [
-                    "Projects.html",
-                    "projectsToDisplay.json",
-                    "showSrcCode.js",
-                    "style.css",
-                    "writeProjectsJson.py"
-                ],
-                "Subdirectory": "./"
-            }
-        ],
-        "Name": "CrossRoads Tutoring Projects"
-    },
-    "SortingAlgorithms": {
-        "Description": "Sorting Algorithms UI",
-        "Directory": "../../../Personal-Projects/Web Development/p5.js/Sorting Algorithms/",
-        "Files": [
-            {
-                "File": [
-                    "MergeSort.html",
-                    "MergeSort.js",
-                    "SlowMergeSort.html",
-                    "SlowMergeSort.js"
-                ],
-                "Subdirectory": "MergeSort/"
-            },
-            {
-                "File": [
-                    "QuickSort.html",
-                    "QuickSort.js",
-                    "SlowQuickSort.html",
-                    "SlowQuickSort.js"
-                ],
-                "Subdirectory": "QuickSort/"
-            },
-            {
-                "File": [
-                    "InsertionSort.html",
-                    "InsertionSort.js",
-                    "SlowInsertionSort.html",
-                    "SlowInsertionSort.js"
-                ],
-                "Subdirectory": "Insertion Sort/"
-            },
-            {
-                "File": [
-                    "BubbleSort.html",
-                    "BubbleSort.js",
-                    "SlowBubbleSort.html",
-                    "SlowBubbleSort.js"
-                ],
-                "Subdirectory": "BubbleSort/"
-            }
-        ],
-        "Name": "Sorting Algorithms"
-    }
+	"ChessAI": {
+		"Description": "This is a Chess Game with an entire frontend and AI",
+		"Directory": "../../../Personal-Projects/Web Development/p5.js/ChessAI/ChessAIv3/",
+		"Files": [
+			{
+				"File": [
+					"ChessAI.html",
+					"chessAI.js",
+					"chessGame.js",
+					"helperFunctions.js",
+					"index.js",
+					"piece.js",
+					"styles.css"
+				],
+				"Subdirectory": "./"
+			},
+			{
+				"File": [
+					"chessAI.aux",
+					"chessAI.log",
+					"chessAI.pdf",
+					"chessAI.synctex.gz",
+					"chessAI.tex",
+					"example1.png"
+				],
+				"Subdirectory": "AI Logic/"
+			},
+			{
+				"File": ["launch.json"],
+				"Subdirectory": ".vscode/"
+			},
+			{
+				"File": ["ChessPieces.png"],
+				"Subdirectory": "Assets/"
+			}
+		],
+		"Name": "Chess AI"
+	},
+	"Circles": {
+		"Description": "This recreates an image using circles",
+		"Directory": "../../../Personal-Projects/Web Development/p5.js/Circles/",
+		"Files": [
+			{
+				"File": [
+					"Circle.js",
+					"FullCanvas.js",
+					"Sky.jpg",
+					"Welcome.html",
+					"Welcome.js",
+					"Welcome.png",
+					"Welcome1.png"
+				],
+				"Subdirectory": "Welcome/"
+			},
+			{
+				"File": ["Circle.js", "FullCanvas.js", "FullColor.html", "FullColor.js", "Porter.jpg", "US.jpg"],
+				"Subdirectory": "FullColor/"
+			}
+		],
+		"Name": "Circles"
+	},
+	"EstimatePi": {
+		"Description": "This estimates Pi using random points placed within a square and a circle cirucumscribed within it",
+		"Directory": "../../../Personal-Projects/Web Development/p5.js/EstimatePi/",
+		"Files": [
+			{
+				"File": ["EstimatePi.html", "EstimatePi.js"],
+				"Subdirectory": "./"
+			}
+		],
+		"Name": "Estimate Pi"
+	},
+	"MazeGen": {
+		"Description": "This is a maze generator",
+		"Directory": "../../../Personal-Projects/Web Development/p5.js/MazeGen/",
+		"Files": [
+			{
+				"File": ["MazeGen.html", "MazeGen.js"],
+				"Subdirectory": "./"
+			}
+		],
+		"Name": "Maze Generator"
+	},
+	"Rockets": {
+		"Description": "This is a visualization of a simple genetic machine learning algorithm",
+		"Directory": "../../../Personal-Projects/Web Development/p5.js/Rockets/",
+		"Files": [
+			{
+				"File": ["DNA.js", "Population.js", "Rocket.js", "Rockets.html", "sketch.js"],
+				"Subdirectory": "./"
+			}
+		],
+		"Name": "Rockets"
+	},
+	"SlidePuzzle": {
+		"Description": "This is a slide puzzle game",
+		"Directory": "../../../Personal-Projects/Web Development/p5.js/SlidePuzzle/",
+		"Files": [
+			{
+				"File": ["Icon.png", "slidePuzzle.js", "slidePuzzle.php"],
+				"Subdirectory": "./"
+			}
+		],
+		"Name": "Slide Puzzle"
+	},
+	"SortingAlgorithms": {
+		"Description": "This is a visualization of multiple Sorting Algorithms",
+		"Directory": "../../../Personal-Projects/Web Development/p5.js/Sorting Algorithms/",
+		"Files": [
+			{
+				"File": ["MergeSort.html", "MergeSort.js", "SlowMergeSort.html", "SlowMergeSort.js"],
+				"Subdirectory": "MergeSort/"
+			},
+			{
+				"File": ["QuickSort.html", "QuickSort.js", "SlowQuickSort.html", "SlowQuickSort.js"],
+				"Subdirectory": "QuickSort/"
+			},
+			{
+				"File": ["InsertionSort.html", "InsertionSort.js", "SlowInsertionSort.html", "SlowInsertionSort.js"],
+				"Subdirectory": "Insertion Sort/"
+			},
+			{
+				"File": ["BubbleSort.html", "BubbleSort.js", "SlowBubbleSort.html", "SlowBubbleSort.js"],
+				"Subdirectory": "BubbleSort/"
+			}
+		],
+		"Name": "Sorting Algorithms"
+	},
+	"TimesTable": {
+		"Description": "This is a times table game",
+		"Directory": "../../../Personal-Projects/Web Development/p5.js/TimesTable/",
+		"Files": [
+			{
+				"File": ["TimesTable.js", "TimesTable.php"],
+				"Subdirectory": "./"
+			}
+		],
+		"Name": "Times Table"
+	}
 }
