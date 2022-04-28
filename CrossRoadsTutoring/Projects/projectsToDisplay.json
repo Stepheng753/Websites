@@ -93,17 +93,6 @@
 		],
 		"Name": "Rockets"
 	},
-	"SlidePuzzle": {
-		"Description": "This is a slide puzzle game",
-		"Directory": "https://stepheng753.com/Personal-Projects/Web%20Development/p5.js/SlidePuzzle/",
-		"Files": [
-			{
-				"File": ["Icon.png", "slidePuzzle.js", "slidePuzzle.php"],
-				"Subdirectory": "./"
-			}
-		],
-		"Name": "Slide Puzzle"
-	},
 	"SortingAlgorithms": {
 		"Description": "This is a visualization of multiple Sorting Algorithms",
 		"Directory": "../../../Personal-Projects/Web Development/p5.js/Sorting Algorithms/",
@@ -126,16 +115,5 @@
 			}
 		],
 		"Name": "Sorting Algorithms"
-	},
-	"TimesTable": {
-		"Description": "This is a times table game",
-		"Directory": "https://stepheng753.com/Personal-Projects/Web%20Development/p5.js/TimesTable/",
-		"Files": [
-			{
-				"File": ["TimesTable.js", "TimesTable.php"],
-				"Subdirectory": "./"
-			}
-		],
-		"Name": "Times Table"
 	}
 }
