@@ -29,7 +29,9 @@ function displayFilePaths() {
 		let projectKey = Object.keys(projectsJSON)[projectCt];
 		let setCurrProjectSelectedStr = "setCurrProjectSelected('" + projectKey + "');";
 		filePathsStr +=
-			'<div class="Project-Name" onclick="' +
+			'<div class="Project-Name" title=" ' +
+			projectsJSON[projectKey].Description +
+			'" onclick="' +
 			setCurrProjectSelectedStr +
 			' ">' +
 			projectsJSON[projectKey].Name +
@@ -61,14 +63,10 @@ function displayFilePaths() {
 			}
 		}
 	}
-	console.log(filePathsStr);
 	filePaths.innerHTML = stringToHTML(filePathsStr);
 }
 
 function displayCode(file, domElement, domHTML) {
-	if (file.includes('.php')) {
-		return;
-	}
 	if (file.includes('.png') || file.includes('.jpg') || file.includes('.jpeg')) {
 		domElement.innerHTML = '<img src="' + file + '" alt="' + file + '">';
 	} else {
@@ -90,7 +88,7 @@ function displayOutput(project, folderIndex) {
 		if (output.src.includes(file)) {
 			return;
 		}
-		if (file.includes('.html') || file.includes('.php')) {
+		if (file.includes('.html')) {
 			output.src = getFilePath(project, folderIndex, i);
 			outputFound = true;
 		}
