@@ -24,11 +24,13 @@ function createMilestones() {
 
 		let msImg = document.createElement('img');
 		msImg.src = milestoneJSON[ms].Photo;
+		msImg.alt = 'I am Groot.';
+		msImg.loading = 'lazy';
 
 		let msTextDiv = document.createElement('div');
 		msTextDiv.id = 'ms-text';
 		let msTitle = document.createElement('h2');
-		msTitle.innerHTML = 'I am Groot';
+		msTitle.innerHTML = 'I am Groot.';
 		let msText = document.createElement('p');
 		let randNum = Math.floor(Math.random() * 500) + 1;
 		for (let i = 0; i < randNum; i++) {
@@ -56,12 +58,20 @@ function createTicks() {
 	for (let i = 0; i < Object.keys(milestoneJSON).length - 2; i++) {
 		let tick = document.createElement('div');
 		tick.className = 'tick';
+		if (i == 0) {
+			tick.className += ' active';
+		}
 		tick.style.top = 5 + ((i + 1) * 90) / (Object.keys(milestoneJSON).length - 1) + '%';
 		clContainer.appendChild(tick);
 
 		tick.onclick = function () {
 			let transformY = i * (-100 / 3) + '%';
 			msContainer.style.transform = 'translateY(' + transformY + ')';
+			let allTicks = document.getElementsByClassName('tick');
+			for (let i = 0; i < allTicks.length; i++) {
+				allTicks[i].classList.remove('active');
+			}
+			tick.classList.add('active');
 		};
 	}
 }
