@@ -75,7 +75,9 @@ function displayCode(file, domElement, domHTML) {
 				return response.text();
 			})
 			.then((text) => {
+				code.classList.remove('prettyprinted');
 				domElement.innerHTML = stringToHTML(text, domHTML);
+				PR.prettyPrint();
 			});
 	}
 }
