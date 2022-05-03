@@ -10,10 +10,16 @@
 		<title>Projects</title>
 	</head>
 	<body>
-		<div class="dark-sidebar" id="explorer"></div>
-		<div class="dark-sidebar" id="filePaths"></div>
-		<code id="code" class="prettyprint linenums" autoload="false"></code>
-		<iframe id="output" type="text/html" width="40%"></iframe>
+		<div id="sidebar-container">
+			<div class="dark-sidebar" id="explorer"></div>
+			<div class="dark-sidebar" id="filePaths"></div>
+		</div>
+
+		<div id="code-output-container">
+			<code id="code" class="prettyprint linenums"></code>
+			<iframe id="output" type="text/html"></iframe>
+		</div>
+
 		<script src="./showSrcCode.js"></script>
 	</body>
 </html>

@@ -33,37 +33,52 @@ body {
 	background-color: #ed254e;
 }
 
+#sidebar-container {
+	display: flex;
+	width: 15%;
+	min-width: 300px;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	height: 100vh;
+}
+
 .dark-sidebar {
 	background-color: var(--explorer-color);
 	margin: 0;
 	padding: 10px;
-
-	min-height: 100%;
-	height: 100vh;
-	min-width: 50px;
-	width: 5%;
-
 	color: #fff;
 }
 
 #filePaths {
 	border-left: #fff 1px solid;
-	min-width: 100px;
-	width: 15%;
+	flex: 5;
 	overflow-y: auto;
+}
+
+#explorer {
+	flex: 1;
+}
+
+#code-output-container {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	width: 85%;
 }
 
 #code {
 	height: calc(100% - 20px);
-	width: 40%;
+	width: 100%;
 	margin: 10px;
 	color: #fff;
 	overflow-y: auto;
+	/* resize: horizontal; */
 }
 
 #output {
 	height: calc(100% - 20px);
-	width: 40%;
+	width: 100%;
 	margin: 10px;
 	color: #fff;
 	border: none;

@@ -120,3 +120,36 @@ function setCurrProjectSelected(projectKey) {
 	}
 	displayFilePaths();
 }
+
+// let currCodeWidth = code.offsetWidth;
+// onmouseup = function (e) {
+// 	if (code.offsetWidth != currCodeWidth) {
+// 		currCodeWidth = code.offsetWidth;
+// 		console.log(currCodeWidth);
+// 		if (output.src) {
+// 			output.contentWindow.location.reload();
+// 			console.log('Here');
+// 		}
+// 	}
+// };
+
+// onmouseover = function (e) {
+// 	let border = code.offsetLeft + code.offsetWidth;
+// 	if (Math.abs(e.clientX - border) < 10) {
+// 		document.body.style.cursor = 'col-resize';
+// 	}
+// };
+
+// onmousedown = function (e) {
+// 	console.log(e.clientX);
+// 	let border = code.offsetLeft + code.offsetWidth;
+// 	if (Math.abs(e.clientX - border) < 50) {
+// 		document.body.style.cursor = 'col-resize';
+// 	}
+// };
+
+// onmouseup = function (e) {
+// 	document.body.style.cursor = 'default';
+// 	code.style.width = e.clientX + 'px';
+// 	console.log('A', e.clientX - code.offsetLeft + 'px');
+// };
