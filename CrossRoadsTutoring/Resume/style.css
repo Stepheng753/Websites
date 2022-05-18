@@ -1,0 +1,101 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 99vh;
+	width: 99vw;
+	overflow: hidden;
+}
+
+.job-box {
+	position: absolute;
+	border: 1px solid black;
+	background-color: white;
+	z-index: 1;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+#job-1 {
+	top: 0;
+	left: 0;
+	width: 30%;
+	height: 45%;
+	background-image: url('./Photos/GeneralAtomics.png');
+	background-size: 100%;
+}
+
+#job-2 {
+	top: 0;
+	left: 30%;
+	width: 20%;
+	height: 55%;
+	background-image: url('./Photos/TechnologyUnlimited.jpeg');
+	z-index: 5;
+	background-size: 90%;
+}
+
+#job-3 {
+	top: 0;
+	left: 50%;
+	width: 15%;
+	height: 30%;
+	background-image: url('./Photos/Statefarm.png');
+}
+
+#job-4 {
+	top: 45%;
+	left: 0%;
+	width: 40%;
+	height: 55%;
+	background-image: url('./Photos/Tramigo.png');
+	background-size: 75%;
+}
+
+#job-5 {
+	top: 55%;
+	left: 40%;
+	width: 30%;
+	height: 45%;
+	background-image: url('./Photos/Skin.png');
+}
+
+#job-6 {
+	top: 30%;
+	left: 50%;
+	width: 30%;
+	height: 25%;
+	background-image: url('./Photos/Mcdonalds.png');
+}
+
+#job-7 {
+	top: 0%;
+	left: 65%;
+	width: 35%;
+	height: 30%;
+	background-image: url('./Photos/TutorDoctor.png');
+}
+
+#job-8 {
+	top: 30%;
+	left: 80%;
+	width: 20%;
+	height: 30%;
+	background-image: url('./Photos/StanleySteemer.png');
+	background-size: 90%;
+}
+
+#job-9 {
+	top: 55%;
+	left: 70%;
+	width: 30%;
+	height: 45%;
+	background-image: url('./Photos/Icon.svg');
+	background-size: 60%;
+	z-index: 1;
+}
+
+.job-box:hover {
+	opacity: 0.5;
+}
