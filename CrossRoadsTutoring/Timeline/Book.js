@@ -65,7 +65,6 @@ function turnPages() {
 
 	nextBtn.addEventListener('click', () => {
 		if (nextPage < pages.length) {
-			leftBtnEnable = false;
 			let page = pages[nextPage];
 			page.classList.remove('flip-page-right');
 			page.classList.add('flip-page-left');
