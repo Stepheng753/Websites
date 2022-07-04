@@ -50,13 +50,26 @@
                     "Circle.js",
                     "FullColor.html",
                     "FullColor.js",
-                    "Porter.jpg",
-                    "US.jpg"
+                    "HotAirBalloon.jpg"
                 ],
                 "Subdirectory": "FullColor/"
             }
         ],
         "Name": "Circles"
+    },
+    "DoublePendulum": {
+        "Description": "This is a simulation of a double pendulum",
+        "Directory": "../../../Personal-Projects/Web Development/p5.js/Double Pendulum/",
+        "Files": [
+            {
+                "File": [
+                    "DoublePendulum.html",
+                    "DoublePendulum.js"
+                ],
+                "Subdirectory": "./"
+            }
+        ],
+        "Name": "Double Pendulum"
     },
     "EstimatePi": {
         "Description": "This estimates Pi using random points placed within a square and a circle cirucumscribed within it",
