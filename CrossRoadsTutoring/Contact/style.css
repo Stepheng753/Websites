@@ -117,19 +117,19 @@ a:active {
 }
 
 #phone {
-	animation: top-left-counter-clockwise 8s forwards infinite;
+	animation: top-left-counter-clockwise ease-out 8s forwards;
 }
 
 #linkedin {
-	animation: bottom-left-counter-clockwise 8s forwards infinite;
+	animation: bottom-left-counter-clockwise ease-out 8s forwards;
 }
 
 #github {
-	animation: bottom-right-counter-clockwise 8s forwards infinite;
+	animation: bottom-right-counter-clockwise ease-out 8s forwards;
 }
 
 #email {
-	animation: top-right-counter-clockwise 8s forwards infinite;
+	animation: top-right-counter-clockwise ease-out 8s forwards;
 }
 
 @keyframes top-left-counter-clockwise {
