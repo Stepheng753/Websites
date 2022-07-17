@@ -1,0 +1,185 @@
+{
+    "ChessAI": {
+        "Description": "This is a Chess Game with an entire frontend and AI",
+        "Directory": "../../../Personal-Projects/Web Development/p5.js/ChessAI/ChessAIv3/",
+        "Files": [
+            {
+                "File": [
+                    "ChessAI.html",
+                    "chessAI.js",
+                    "chessGame.js",
+                    "helperFunctions.js",
+                    "index.js",
+                    "piece.js",
+                    "styles.css"
+                ],
+                "Subdirectory": "./"
+            },
+            {
+                "File": [
+                    "launch.json"
+                ],
+                "Subdirectory": ".vscode/"
+            },
+            {
+                "File": [
+                    "chessAI.aux",
+                    "chessAI.log",
+                    "chessAI.pdf",
+                    "chessAI.synctex.gz",
+                    "chessAI.tex",
+                    "example1.png"
+                ],
+                "Subdirectory": "AI Logic/"
+            },
+            {
+                "File": [
+                    "ChessPieces.png"
+                ],
+                "Subdirectory": "Assets/"
+            }
+        ],
+        "Name": "Chess AI"
+    },
+    "Circles": {
+        "Description": "This recreates an image using circles",
+        "Directory": "../../../Personal-Projects/Web Development/p5.js/Circles/",
+        "Files": [
+            {
+                "File": [
+                    "Circle.js",
+                    "FullColor.html",
+                    "FullColor.js",
+                    "HotAirBalloon.jpg"
+                ],
+                "Subdirectory": "FullColor/"
+            }
+        ],
+        "Name": "Circles"
+    },
+    "DoublePendulum": {
+        "Description": "This is a simulation of a double pendulum",
+        "Directory": "../../../Personal-Projects/Web Development/p5.js/Double Pendulum/",
+        "Files": [
+            {
+                "File": [
+                    "DoublePendulum.html",
+                    "DoublePendulum.js"
+                ],
+                "Subdirectory": "./"
+            }
+        ],
+        "Name": "Double Pendulum"
+    },
+    "EstimatePi": {
+        "Description": "This estimates Pi using random points placed within a square and a circle cirucumscribed within it",
+        "Directory": "../../../Personal-Projects/Web Development/p5.js/EstimatePi/",
+        "Files": [
+            {
+                "File": [
+                    "EstimatePi.html",
+                    "EstimatePi.js"
+                ],
+                "Subdirectory": "./"
+            }
+        ],
+        "Name": "Estimate Pi"
+    },
+    "MazeGen": {
+        "Description": "This is a maze generator",
+        "Directory": "../../../Personal-Projects/Web Development/p5.js/MazeGen/",
+        "Files": [
+            {
+                "File": [
+                    "MazeGen.html",
+                    "MazeGen.js"
+                ],
+                "Subdirectory": "./"
+            }
+        ],
+        "Name": "Maze Generator"
+    },
+    "Rockets": {
+        "Description": "This is a visualization of a simple genetic machine learning algorithm",
+        "Directory": "../../../Personal-Projects/Web Development/p5.js/Rockets/",
+        "Files": [
+            {
+                "File": [
+                    "DNA.js",
+                    "Population.js",
+                    "Rocket.js",
+                    "Rockets.html",
+                    "sketch.js"
+                ],
+                "Subdirectory": "./"
+            }
+        ],
+        "Name": "Rockets"
+    },
+    "SlidePuzzle": {
+        "Description": "This is a slide puzzle game",
+        "Directory": "../../../Personal-Projects/Web Development/p5.js/SlidePuzzle/",
+        "Files": [
+            {
+                "File": [
+                    "Icon.png",
+                    "slidePuzzle.html",
+                    "slidePuzzle.js",
+                    "slidePuzzle.php"
+                ],
+                "Subdirectory": "./"
+            }
+        ],
+        "Name": "Slide Puzzle"
+    },
+    "SortingAlgorithms": {
+        "Description": "This is a visualization of multiple Sorting Algorithms",
+        "Directory": "../../../Personal-Projects/Web Development/p5.js/Sorting Algorithms/",
+        "Files": [
+            {
+                "File": [
+                    "BubbleSort.html",
+                    "BubbleSort.js"
+                ],
+                "Subdirectory": "BubbleSort/"
+            },
+            {
+                "File": [
+                    "InsertionSort.html",
+                    "InsertionSort.js"
+                ],
+                "Subdirectory": "Insertion Sort/"
+            },
+            {
+                "File": [
+                    "MergeSort.html",
+                    "MergeSort.js"
+                ],
+                "Subdirectory": "MergeSort/"
+            },
+            {
+                "File": [
+                    "QuickSort.html",
+                    "QuickSort.js"
+                ],
+                "Subdirectory": "QuickSort/"
+            }
+        ],
+        "Name": "Sorting Algorithms"
+    },
+    "TimesTable": {
+        "Description": "This is a times table game",
+        "Directory": "../../../Personal-Projects/Web Development/p5.js/TimesTable/",
+        "Files": [
+            {
+                "File": [
+                    "TimesTable.html",
+                    "TimesTable.js",
+                    "TimesTable.php"
+                ],
+                "Subdirectory": "./"
+            }
+        ],
+        "Name": "Times Table"
+    }
+}
