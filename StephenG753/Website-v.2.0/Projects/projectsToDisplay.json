@@ -70,6 +70,25 @@
 		],
 		"Name": "Estimate Pi"
 	},
+	"HilbertCurve": {
+		"Description": "This is a visualization of a hilbert curve given some order",
+		"Directory": "../../../../Personal-Projects/Web Development/p5.js/HilbertCurve/",
+		"Files": [
+			{
+				"File": ["HilbertCurve.html", "HilbertCurve.js", "PathFunctions.js"],
+				"Subdirectory": "./"
+			},
+			{
+				"File": ["PictureToSound.html", "PictureToSound.js", "RGBAtoHSLA.js"],
+				"Subdirectory": "PictureToSound/"
+			},
+			{
+				"File": ["Flash.jpg", "Lake.jpg", "Rainbow.jpg", "Sunflower.jpeg"],
+				"Subdirectory": "PictureToSound/External/"
+			}
+		],
+		"Name": "Hilbert Curve"
+	},
 	"MazeGen": {
 		"Description": "This is a maze generator",
 		"Directory": "../../../../Personal-Projects/Web Development/p5.js/MazeGen/",
