@@ -113,6 +113,13 @@ body {
 .Project-Name {
 	margin-bottom: 10px;
 	text-decoration: underline;
+	cursor: pointer;
+	transition: all 0.1s;
+}
+
+.Project-Name:hover,
+.file:hover {
+	transform: scale(1.1) translateX(10px);
 }
 
 .subdirectory {
@@ -124,6 +131,7 @@ body {
 	padding-left: 40px;
 	cursor: pointer;
 	margin: 0;
+	transition: all 0.1s;
 }
 
 li.L0,
