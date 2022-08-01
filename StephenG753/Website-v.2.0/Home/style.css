@@ -41,7 +41,7 @@ body {
 	transform: scale(2);
 }
 
-#title {
+#title > h1 {
 	align-self: center;
 	font-size: 50pt;
 	color: #b31b1b;
@@ -72,7 +72,6 @@ body {
 	font-size: 20pt;
 	padding: 20px;
 	color: #1f93db;
-	text-shadow: -0.2px 0.2px black;
 	opacity: 0;
 	top: 55%;
 	left: 20%;

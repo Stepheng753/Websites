@@ -215,7 +215,6 @@ h1 {
 	position: absolute;
 	left: calc(5% + (95% / 2) + 40% + 1%);
 	top: 50%;
-	background-color: #329ba8;
 }
 
 #prev-btn {

@@ -13,24 +13,6 @@ body {
 	background-image: linear-gradient(#ffd086, #ed6571);
 }
 
-/* ::-webkit-scrollbar {
-	width: 10px;
-	height: 5;
-}
-
-::-webkit-scrollbar-track {
-	background-color: #665f5f;
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: #d6dee1;
-	border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-	background-color: #ed254e;
-} */
-
 .gradient-txt {
 	background-image: linear-gradient(45deg, #e65a5a, #e65a5a, #5ac0e6);
 	background-clip: text;
@@ -71,8 +53,6 @@ ul {
 
 nav {
 	background-color: #91cbd7;
-	height: 100px;
-	width: 80%;
 	margin-top: 100px;
 	border-radius: 20px;
 	display: flex;
@@ -85,6 +65,22 @@ nav > h1,
 nav > h1 > a {
 	font-size: 20pt;
 	color: #b83636;
+	transition: all 1s;
+}
+
+.horzNav {
+	height: 100px;
+	width: 80%;
+	flex-direction: row;
+	position: relative;
+}
+
+.vertNav {
+	height: 300px;
+	width: 10%;
+	flex-direction: column;
+	position: fixed;
+	right: calc(((25% / 2) - 10%) / 2);
 }
 
 #title-container {
@@ -137,6 +133,48 @@ nav > h1 > a {
 	color: #2f6174;
 }
 
+#tutor {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#tutor > * > ul {
+	margin-left: 50px;
+	width: 80%;
+}
+
+#owner {
+	background-color: #ffe5ca;
+	border-radius: 50px;
+	height: 85%;
+	width: 75%;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#owner > * {
+	width: 85%;
+}
+
+#owner > h1 {
+	margin-left: 0;
+	text-align: left;
+}
+
+#owner > h3 {
+	color: #2f6174;
+	line-height: 2;
+	text-indent: 2em;
+	font-size: 14pt;
+}
+
+#owner > h3 > blockquote {
+	text-indent: 0;
+}
+
 #subject {
 	display: flex;
 	flex-direction: row;
@@ -145,11 +183,15 @@ nav > h1 > a {
 	overflow-y: scroll;
 }
 
-#subject-list,
-#stats-list {
-	flex: 1;
-	height: 100%;
-	/* outline: 1px solid black; */
+#lists {
+	background-color: #ffe5ca;
+	border-radius: 50px;
+	height: 85%;
+	width: 75%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	box-shadow: 10px 10px 10px 10px solid black;
 }
 
 #subject > * > * > h3 {
@@ -157,66 +199,63 @@ nav > h1 > a {
 	font-size: 18pt;
 }
 
+#subject-list,
+#stats-list {
+	flex: 1;
+	height: 100%;
+	overflow-y: auto;
+	/* outline: 1px solid black; */
+}
+
 #subject-list > ul {
 	columns: 2;
-	margin-left: 50px;
 }
 
-#stats-list > ul > li {
-	margin-left: 50px;
-}
-
-#tutor > * > ul {
+#subject-list > ul,
+#stats-list > ul {
 	margin-left: 50px;
 	width: 80%;
-}
-
-#tutor {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#owner {
-	background-color: #ffe5ca;
-	border-radius: 50px;
-	height: 85%;
-	width: 70%;
-	overflow-y: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-#owner > h1 {
-	width: 80%;
-	margin-left: 0;
-	text-align: left;
-}
-
-#owner > h3 {
-	color: #2f6174;
-	line-height: 2;
-	width: 80%;
-}
-
-#lists {
-	background-color: #ffe5ca;
-	border-radius: 50px;
-	height: 90%;
-	width: 85%;
-	overflow-y: auto;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	box-shadow: 10px 10px 10px 10px solid black;
 }
 
 #vertical-line {
 	border-left: 2px solid #2f6174;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-inline: 2px;
 	height: 95%;
-	width: 20px;
+	width: 4px;
+}
+
+#subject-list::-webkit-scrollbar,
+#stats-list::-webkit-scrollbar {
+	width: 8px;
+}
+
+#subject-list::-webkit-scrollbar-track,
+#stats-list::-webkit-scrollbar-track {
+	background-color: #665f5f;
+	border-radius: 20px;
+}
+
+#subject-list::-webkit-scrollbar-thumb,
+#stats-list::-webkit-scrollbar-thumb {
+	background-color: #d6dee1;
+	border-radius: 20px;
+}
+
+#subject-list::-webkit-scrollbar-thumb:hover,
+#stats-list::-webkit-scrollbar-thumb:hover {
+	background-color: #ed6571;
+}
+
+#subject-list::-webkit-scrollbar-button:start:increment,
+#stats-list::-webkit-scrollbar-button:start:increment {
+	height: 5%;
+	display: block;
+	/* background: transparent; */
+}
+
+#subject-list::-webkit-scrollbar-button:end:increment,
+#stats-list::-webkit-scrollbar-button:end:increment {
+	height: 5%;
+	display: block;
+	/* background: transparent; */
 }
