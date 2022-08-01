@@ -65,7 +65,6 @@ nav > h1,
 nav > h1 > a {
 	font-size: 20pt;
 	color: #b83636;
-	transition: all 1s;
 }
 
 .horzNav {
