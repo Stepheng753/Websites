@@ -36,6 +36,12 @@ body {
 	margin-top: 50px;
 }
 
+a,
+a:visited,
+a:active {
+	color: #b83636;
+}
+
 li {
 	margin-bottom: 10px;
 	font-weight: bold;

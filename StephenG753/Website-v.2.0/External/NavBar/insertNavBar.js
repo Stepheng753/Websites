@@ -15,7 +15,7 @@ function insertNavBar(domElement) {
             <img src="../External/NavBar/NavBarIcons/bio.png" title="Get To Know Me" />
         </a>
         <a href="../../../CrossRoadsTutoring/" class="nav-item">
-            <img src="../External/NavBar/NavBarIcons/crossroads-icon-only.svg" title="Crossroads Tutoring"/>
+            <img src="../External/NavBar/NavBarIcons/crossroads-icon-only.svg" title="CrossRoads Tutoring"/>
         </a>
 		<a href="../Contact/Contact" class="nav-item">
             <img src="../External/NavBar/NavBarIcons/contact.png" title="Contact"/>
@@ -39,8 +39,8 @@ function insertNavBarHTML(domElement) {
 		<a href="../Bio/Bio.html" class="nav-item">
             <img src="../External/NavBar/NavBarIcons/bio.png" title="Get To Know Me" />
         </a>
-        <a href="../../../CrossRoadsTutoring/Crossroads.html" class="nav-item">
-            <img src="../External/NavBar/NavBarIcons/crossroads-icon-only.svg" title="Crossroads Tutoring"/>
+        <a href="../../../CrossRoadsTutoring/CrossRoads.html" class="nav-item">
+            <img src="../External/NavBar/NavBarIcons/crossroads-icon-only.svg" title="CrossRoads Tutoring"/>
         </a>
 		<a href="../Contact/Contact.html" class="nav-item">
             <img src="../External/NavBar/NavBarIcons/contact.png" title="Contact"/>
