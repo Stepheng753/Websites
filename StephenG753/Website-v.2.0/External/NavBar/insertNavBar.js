@@ -48,5 +48,5 @@ function insertNavBarHTML(domElement) {
         ` + domElement.innerHTML;
 }
 
-// insertNavBar(document.getElementById('nav-bar'));
-insertNavBarHTML(document.getElementById('nav-bar'));
+insertNavBar(document.getElementById('nav-bar'));
+// insertNavBarHTML(document.getElementById('nav-bar'));
