@@ -14,7 +14,7 @@ function insertNavBar(domElement) {
 		<a href="../Bio/Bio" class="nav-item">
             <img src="../External/NavBar/NavBarIcons/bio.png" title="Get To Know Me" />
         </a>
-        <a href="../../../CrossRoadsTutoring/" class="nav-item">
+        <a href="https://www.CrossRoadsTutoring.com" class="nav-item">
             <img src="../External/NavBar/NavBarIcons/crossroads-icon-only.svg" title="CrossRoads Tutoring"/>
         </a>
 		<a href="../Contact/Contact" class="nav-item">
@@ -23,7 +23,7 @@ function insertNavBar(domElement) {
         ` + domElement.innerHTML;
 }
 
-function insertNavBarHTML(domElement) {
+function insertNavBarDev(domElement) {
 	console.log(domElement);
 	domElement.innerHTML =
 		`
@@ -49,4 +49,4 @@ function insertNavBarHTML(domElement) {
 }
 
 insertNavBar(document.getElementById('nav-bar'));
-// insertNavBarHTML(document.getElementById('nav-bar'));
+// insertNavBarDev(document.getElementById('nav-bar'));
