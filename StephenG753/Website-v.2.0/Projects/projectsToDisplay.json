@@ -122,6 +122,17 @@
 		],
 		"Name": "Slide Puzzle"
 	},
+	"SnakeGame": {
+		"Description": "This is a Snake Game",
+		"Directory": "../../../../Personal-Projects/Web Development/p5.js/SnakeGame/",
+		"Files": [
+			{
+				"File": ["Grid.js", "Snake.js", "SnakeGame.html", "SnakeGame.js", "mouse.png"],
+				"Subdirectory": "./"
+			}
+		],
+		"Name": "Snake Game"
+	},
 	"SortingAlgorithms": {
 		"Description": "This is a visualization of multiple Sorting Algorithms",
 		"Directory": "../../../../Personal-Projects/Web Development/p5.js/Sorting Algorithms/",

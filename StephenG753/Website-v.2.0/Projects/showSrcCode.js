@@ -50,11 +50,13 @@ function displayFilePaths() {
 					setSrcCodeStr =
 						"displayCode(getFilePath('" + projectKey + "', " + subDirCt + ', ' + fileCt + '), code, true);';
 					setOutputStr = "displayOutput('" + projectKey + "', " + subDirCt + ');';
+					focusOutput = 'output.focus();';
 
 					filePathsStr +=
 						'<div class="file" onclick="' +
 						setSrcCodeStr +
 						setOutputStr +
+						focusOutput +
 						'">' +
 						projectsJSON[projectKey].Files[subDirCt].File[fileCt] +
 						'</div>' +
