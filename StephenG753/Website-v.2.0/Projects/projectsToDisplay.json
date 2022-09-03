@@ -100,6 +100,17 @@
 		],
 		"Name": "Maze Generator"
 	},
+	"OpticalIllusion": {
+		"Description": "Straight Lines that Look like they're moving in a circle",
+		"Directory": "../../../../Personal-Projects/Web Development/p5.js/OpticalIllusion/",
+		"Files": [
+			{
+				"File": ["OpticalIllusion.html", "OpticalIllusion.js"],
+				"Subdirectory": "./"
+			}
+		],
+		"Name": "Optical Illusion"
+	},
 	"Rockets": {
 		"Description": "This is a visualization of a simple genetic machine learning algorithm",
 		"Directory": "../../../../Personal-Projects/Web Development/p5.js/Rockets/",

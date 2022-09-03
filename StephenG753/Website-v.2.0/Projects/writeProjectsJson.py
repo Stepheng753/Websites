@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 import os
-
+os.chdir('/home/stepheng753/Projects/Websites/StephenG753/Website-v.2.0/Projects/')
 filename = 'projectsToDisplay.json'
 file = open(filename)
 data = json.load(file)
@@ -24,7 +24,7 @@ for project in data:
             if (sub_dir in sub_dir_dict):
                 sub_dir_dict[sub_dir].append(name)
                 sub_dir_dict[sub_dir].sort()
-            else: 
+            else:
                 sub_dir_dict[sub_dir] = [name]
 
     for key in sorted(sub_dir_dict):
